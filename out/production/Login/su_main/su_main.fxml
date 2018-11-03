@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="268.0" prefWidth="454.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="su_main.SuperMainController">
+<children>
+    <MenuBar layoutY="-1.0" prefHeight="29.0" prefWidth="454.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="Logout" />
+        </menus>
+    </MenuBar>
+    <Button layoutX="125.0" layoutY="84.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="193.0" text="Stores" />
+    <Button layoutX="125.0" layoutY="123.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="193.0" text="Warehouses" />
+    <Button layoutX="125.0" layoutY="160.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="193.0" text="Users" />
+    <!--<Button layoutX="125.0" layoutY="200.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="193.0" text="WarehouseAdmins" />-->
+</children>
+</AnchorPane>

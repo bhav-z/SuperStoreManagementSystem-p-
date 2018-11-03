@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="add_subcategory.AddSubController">
+    <children>
+        <TextField layoutX="303.0" layoutY="52.0" prefHeight="27.0" prefWidth="185.0" />
+        <Label layoutX="112.0" layoutY="57.0" text="Subcategory Name" />
+        <TableView layoutX="79.0" layoutY="153.0" prefHeight="146.0" prefWidth="455.0">
+            <columns>
+                <TableColumn prefWidth="75.0" text="ItemName" />
+                <TableColumn prefWidth="75.0" text="ItemID" />
+            <TableColumn prefWidth="75.0" text="Add" />
+            </columns>
+        </TableView>
+        <TextField layoutX="79.0" layoutY="102.0" prefHeight="27.0" prefWidth="355.0" />
+        <Button layoutX="457.0" layoutY="102.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="73.0" text="Search" />
+        <Button layoutX="405.0" layoutY="324.0" mnemonicParsing="false" text="Add Subcategory" />
+    </children>
+</AnchorPane>

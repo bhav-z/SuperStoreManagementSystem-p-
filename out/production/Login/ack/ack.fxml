@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+             prefHeight="203.0" prefWidth="480.0" xmlns="http://javafx.com/javafx"
+             fx:controller="ack.AckController" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+    <Label layoutX="59.0" layoutY="53.0" text="Ack Message" />
+
+    <Button layoutX="351.0" layoutY="130.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="68.0" text="Okay" />
+</children>
+</AnchorPane>
