@@ -14,7 +14,8 @@
     <children>
         <Label layoutX="169.0" layoutY="68.0" text="Superstore Name" />
         <Label layoutX="196.0" layoutY="100.0" text="Login As" />
-        <Button layoutX="89.0" layoutY="137.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="107.0" text="Staff" />
+        <Button fx:id="Staff"
+                layoutX="89.0" layoutY="137.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="107.0" text="Staff" />
         <Button layoutX="250.0" layoutY="137.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="107.0" text="Guest" />
     </children>
 </AnchorPane>
