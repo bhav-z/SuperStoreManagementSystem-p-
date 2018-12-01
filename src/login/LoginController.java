@@ -67,7 +67,7 @@ public class LoginController {
         else if(a.equals("Store Admin"))
             return "storeauth";
         else
-            return "guest";
+            return "userauth";
 
     }
 

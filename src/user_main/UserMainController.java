@@ -21,6 +21,7 @@ public class UserMainController implements Initializable {
     @FXML private TableView category_table;
     @FXML private TableColumn name;
     @FXML private TableColumn explore;
+
     private ObservableList<Store> data= FXCollections.observableArrayList(new Store("Electronics"));
 
     @Override
@@ -29,7 +30,6 @@ public class UserMainController implements Initializable {
 
         name.setCellValueFactory(new PropertyValueFactory<Store, String>("category_name"));
         explore.setCellValueFactory(new PropertyValueFactory<Store, String>("explore"));
-
         category_table.setItems(data);
 
     }

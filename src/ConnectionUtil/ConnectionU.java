@@ -17,7 +17,7 @@ public class ConnectionU {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection("jdbc:mysql://localhost/"+dbName, username, password);
-        } catch (Exception e) {
+        }catch (Exception e){
             JOptionPane.showMessageDialog(null, e);
             return null;
         }

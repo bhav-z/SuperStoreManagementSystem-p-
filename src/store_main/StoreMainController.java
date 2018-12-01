@@ -31,5 +31,4 @@ public class StoreMainController implements Initializable {
 
         category_table.setItems(data);
     }
-
 }
