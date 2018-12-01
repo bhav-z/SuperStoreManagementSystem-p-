@@ -2,6 +2,7 @@ package login;
 
 import ConnectionUtil.ConnectionU;
 
+import error_window.ErrorWindowController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -92,6 +93,9 @@ public class LoginController {
             Scene error_scene=new Scene(error_page);
             errorwindow.setScene(error_scene);
             errorwindow.show();
+            ErrorWindowController ew=loader3.getController();
+            ew.setErrorTitle("Invalid Credentials");
+            ew.setErrorMessage("The username or password is incorrect.");
         }
         else if(s.equals("Connected") && this.typeOfUser.equals("Super User"))
             loader2.setLocation(getClass().getResource("/su_main/su_main.fxml"));
