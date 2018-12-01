@@ -37,8 +37,14 @@ public class InitialController {
 
     }
 
-    public void guestButtonClicked(ActionEvent actionEvent){
-
+    public void guestButtonClicked(ActionEvent actionEvent) throws IOException{
+            FXMLLoader loader=new FXMLLoader();
+            loader.setLocation(getClass().getResource("/user_main/usermain.fxml"));
+            Parent user_main_page=loader.load();
+            Scene user_main_scene=new Scene(user_main_page);
+            Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+            window.setScene(user_main_scene);
+            window.show();
     }
 
     
