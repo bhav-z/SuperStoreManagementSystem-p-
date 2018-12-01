@@ -29,7 +29,6 @@ public class LoginController {
 //        isConnected.setText("Not Connected"); // errorLabel is for showing errors with log in
         ConnectionU connectionClass = new ConnectionU();
         Connection connection=connectionClass.getConnection();
-
         try {
             Statement statement=connection.createStatement();
             String tableNAme="userauth";

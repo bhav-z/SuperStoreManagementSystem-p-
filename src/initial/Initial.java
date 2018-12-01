@@ -14,6 +14,8 @@ public class Initial extends Application {
         primaryStage.setTitle("Initial");
         primaryStage.setScene(new Scene(root, 446, 242));
         primaryStage.show();
+
+
     }
 
 

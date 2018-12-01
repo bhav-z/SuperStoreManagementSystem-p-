@@ -20,8 +20,10 @@
                 </columns>
             </TableView>
             <TextField layoutX="80.0" layoutY="43.0" prefHeight="27.0" prefWidth="355.0" />
-            <Button layoutX="453.0" layoutY="43.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" text="Search" />
-            <Button layoutX="425.0" layoutY="329.0" mnemonicParsing="false" text="Add Item" />
+            <Button fx:id="search" onAction="#SEARCH"
+                    layoutX="453.0" layoutY="43.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" text="Search" />
+            <Button fx:id="add_item" onAction="#ADDITEM"
+                    layoutX="425.0" layoutY="329.0" mnemonicParsing="false" text="Add Item" />
             <!--<Button layoutX="296.0" layoutY="329.0" mnemonicParsing="false" text="Generate Order" />-->
         </children>
     </AnchorPane>

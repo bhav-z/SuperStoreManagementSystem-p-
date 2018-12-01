@@ -2,11 +2,13 @@ package inventory_items;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import store_main.Store;
 
 import java.net.URL;
@@ -27,7 +29,15 @@ public class StoreItemController implements Initializable {
         name.setCellValueFactory(new PropertyValueFactory<Store, String>("category_name"));
         update.setCellValueFactory(new PropertyValueFactory<Store, String>("update"));
         delete.setCellValueFactory(new PropertyValueFactory<Store, String>("delete"));
-
         category_table.setItems(data);
+
+    }
+
+    public void SEARCH(ActionEvent actionEvent) {
+
+    }
+
+    public void ADDITEM(ActionEvent actionEvent) {
+
     }
 }

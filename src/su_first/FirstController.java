@@ -23,7 +23,9 @@ public class FirstController implements Initializable {
     @FXML private TableColumn view;
 
     private ObservableList<Order> data4= FXCollections.observableArrayList(new Order("Bandra", "123", "Store", "Raj",
-            "45", "7/12/18", "yes"));
+            "45", "7/12/18", "yes"),new Order("Sudooooo", "23", "Store", "Aaj",
+            "42", "7/12/18", "yes"),new Order("Aandra", "12223", "Store", "Zaj",
+            "46", "7/12/18", "yes"));
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
