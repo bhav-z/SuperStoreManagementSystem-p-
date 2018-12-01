@@ -9,6 +9,6 @@
    <children>
       <Button layoutX="284.0" layoutY="158.0" mnemonicParsing="false" text="Proceed" />
       <Label layoutX="64.0" layoutY="85.0" text="Select Warehouse" />
-      <ComboBox layoutX="206.0" layoutY="80.0" prefWidth="150.0" promptText="Worli" />
+      <ComboBox fx:id="comboString" layoutX="206.0" layoutY="80.0" prefWidth="150.0" promptText="Worli" />
    </children>
 </AnchorPane>

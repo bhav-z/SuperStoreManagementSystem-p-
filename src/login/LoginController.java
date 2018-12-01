@@ -57,7 +57,6 @@ public class LoginController {
         }
 
         this.switchToUserScreen(isConnected.getText(), actionEvent);
-
     }
 
     public void setTypeOfUser(String s){
