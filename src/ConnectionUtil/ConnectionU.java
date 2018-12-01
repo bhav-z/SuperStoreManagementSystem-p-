@@ -1,4 +1,4 @@
-package login;
+package ConnectionUtil;
 
 
 import javax.swing.*;

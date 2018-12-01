@@ -1,12 +1,12 @@
 package login;
 
+import ConnectionUtil.ConnectionU;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
-import MainClasses.dbClass;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -21,11 +21,9 @@ public class LoginController {
     private TextField usernameField;
     @FXML
     private Label isConnected;
-
     @FXML
     protected void handleLoginButtonAction(ActionEvent event) throws SQLException {
         isConnected.setText("Not Connected"); // errorLabel is for showing errors with log in
-
     }
     public void Login(ActionEvent actionEvent){
 //        isConnected.setText("Not Connected"); // errorLabel is for showing errors with log in
@@ -48,9 +46,4 @@ public class LoginController {
         }
 
     }
-
-
-
-
-
 }
