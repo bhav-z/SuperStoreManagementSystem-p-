@@ -1,5 +1,6 @@
 package w_main;
 
+import MainClasses.Warehouse;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -22,6 +23,8 @@ public class WarehouseMainController implements Initializable {
     @FXML private TableColumn go;
     private ObservableList<Store> data= FXCollections.observableArrayList(new Store("Electronics"));
 
+    private Warehouse warehouse;
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb){
@@ -29,8 +32,11 @@ public class WarehouseMainController implements Initializable {
         updatee.setCellValueFactory(new PropertyValueFactory<Store, String>("update"));
         deletee.setCellValueFactory(new PropertyValueFactory<Store, String>("delete"));
         go.setCellValueFactory(new PropertyValueFactory<Store, String>("view"));
-
-
         category_tablee.setItems(data);
+    }
+
+    public void setWarehouse(String s){
+        this.warehouse=new Warehouse();
+        this.warehouse.setName(s);
     }
 }
