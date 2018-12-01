@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -82,8 +83,16 @@ public class LoginController {
     public void switchToUserScreen(String s, ActionEvent event) throws IOException {
         FXMLLoader loader2=new FXMLLoader();
 
-        if(s.equals("Not Connected"))
-            loader2.setLocation(getClass().getResource("/error_window/errorw.fxml"));
+        if(s.equals("Not Connected") || s.equals("LoginError")) {
+            Stage errorwindow=new Stage();
+            errorwindow.initModality(Modality.APPLICATION_MODAL);
+            FXMLLoader loader3=new FXMLLoader();
+            loader3.setLocation(getClass().getResource("/error_window/errorw.fxml"));
+            Parent error_page=loader3.load();
+            Scene error_scene=new Scene(error_page);
+            errorwindow.setScene(error_scene);
+            errorwindow.show();
+        }
         else if(s.equals("Connected") && this.typeOfUser.equals("Super User"))
             loader2.setLocation(getClass().getResource("/su_main/su_main.fxml"));
         else if(s.equals("Connected") && this.typeOfUser.equals("Warehouse Admin"))
