@@ -4,13 +4,14 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="242.0" prefWidth="446.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="242.0" prefWidth="446.0" xmlns="http://javafx.com/javafx/8.0.121"
+            fx:controller="initial.InitialController" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <Label layoutX="170.0" layoutY="28.0" text="Superstore Name" />
         <Label layoutX="199.0" layoutY="73.0" text="Login As" />
-        <Button fx:id="Staff" layoutX="63.0" layoutY="113.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="147.0" text="Super User" />
-        <Button layoutX="232.0" layoutY="113.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="147.0" text="Guest" />
-      <Button layoutX="63.0" layoutY="171.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="147.0" text="Warehouse Admin" />
-      <Button layoutX="232.0" layoutY="171.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="147.0" text="Store Admin" />
+        <Button fx:id="SuperUser" onAction="#buttonClickedForLogin" layoutX="63.0" layoutY="113.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="147.0" text="Super User" />
+        <Button fx:id="Guest" onAction="#guestButtonClicked" layoutX="232.0" layoutY="113.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="147.0" text="Guest" />
+      <Button fx:id="WarehouseAdmin"  onAction="#buttonClickedForLogin" layoutX="63.0" layoutY="171.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="147.0" text="Warehouse Admin" />
+      <Button fx:id="StoreAdmin" onAction="#buttonClickedForLogin" layoutX="232.0" layoutY="171.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="147.0" text="Store Admin" />
     </children>
 </AnchorPane>

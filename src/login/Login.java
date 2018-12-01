@@ -10,7 +10,7 @@ public class Login extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("sign_in.fxml"));
         primaryStage.setTitle("SuperstoreLogin");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();

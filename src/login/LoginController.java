@@ -15,8 +15,12 @@ import java.sql.Statement;
 
 public class LoginController {
 
+    private String typeOfUser="";
+
     @FXML
     private PasswordField passwordField;
+//    @FXML
+//    private Label infoEx;
     @FXML
     private TextField usernameField;
     @FXML
@@ -31,8 +35,8 @@ public class LoginController {
         Connection connection=connectionClass.getConnection();
         try {
             Statement statement=connection.createStatement();
-            String tableNAme="userauth";
-            String sql = "SELECT * FROM "+tableNAme+" WHERE username = '"+usernameField.getText()+"' AND password = '"+passwordField.getText()+"';";
+            String tableName=this.getUserTableName();
+            String sql = "SELECT * FROM "+tableName+" WHERE username = '"+usernameField.getText()+"' AND password = '"+passwordField.getText()+"';";
             ResultSet resultSet=statement.executeQuery(sql);
             if(resultSet.next()){
                 isConnected.setText("Connected");
@@ -45,4 +49,33 @@ public class LoginController {
         }
 
     }
+
+    public void setTypeOfUser(String s){
+        typeOfUser=s;
+    }
+
+    public String getTypeOfUser(){
+        return this.typeOfUser;
+    }
+
+    public String getUserTableName(){
+        String a=this.typeOfUser;
+        if(a.equals("Super User"))
+            return "superauth";
+        else if(a.equals("Warehouse Admin"))
+            return "warehouseauth";
+        else if(a.equals("Store Admin"))
+            return "storeauth";
+        else
+            return "guest";
+
+    }
+
+//    public boolean loginAuthorisation(String n){
+//
+//        if(n.equals("userauth")){
+//
+//
+//        }
+//    }
 }
