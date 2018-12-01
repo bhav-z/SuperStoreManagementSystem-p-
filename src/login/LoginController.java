@@ -84,6 +84,7 @@ public class LoginController {
 
     public void switchToUserScreen(String s, ActionEvent event) throws IOException {
         FXMLLoader loader2=new FXMLLoader();
+        int i=0;
 
         if(s.equals("Not Connected") || s.equals("LoginError")) {
             Stage errorwindow=new Stage();
@@ -98,18 +99,26 @@ public class LoginController {
             ew.setErrorTitle("Invalid Credentials");
             ew.setErrorMessage("The username or password is incorrect.");
         }
-        else if(s.equals("Connected") && this.typeOfUser.equals("Super User"))
+        else if(s.equals("Connected") && this.typeOfUser.equals("Super User")) {
             loader2.setLocation(getClass().getResource("/su_main/su_main.fxml"));
-        else if(s.equals("Connected") && this.typeOfUser.equals("Warehouse Admin"))
+            i++;
+        }
+        else if(s.equals("Connected") && this.typeOfUser.equals("Warehouse Admin")){
             loader2.setLocation(getClass().getResource("/warehouse_main1/waremain1.fxml"));
-        else if(s.equals("Connected") && this.typeOfUser.equals("Store Admin"))
+            i++;
+        }
+        else if(s.equals("Connected") && this.typeOfUser.equals("Store Admin")) {
             loader2.setLocation(getClass().getResource("/store_main/storemain.fxml"));
+            i++;
+        }
 
-        Parent user_page=loader2.load();
-        Scene user_scene=new Scene(user_page);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(user_scene);
-        window.show();
+        if(i!=0) {
+            Parent user_page = loader2.load();
+            Scene user_scene = new Scene(user_page);
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setScene(user_scene);
+            window.show();
+        }
     }
 
 
