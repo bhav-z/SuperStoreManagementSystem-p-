@@ -4,10 +4,16 @@ import ConnectionUtil.ConnectionU;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -29,7 +35,7 @@ public class LoginController {
     protected void handleLoginButtonAction(ActionEvent event) throws SQLException {
         isConnected.setText("Not Connected"); // errorLabel is for showing errors with log in
     }
-    public void Login(ActionEvent actionEvent){
+    public void Login(ActionEvent actionEvent) throws IOException{
 //        isConnected.setText("Not Connected"); // errorLabel is for showing errors with log in
         ConnectionU connectionClass = new ConnectionU();
         Connection connection=connectionClass.getConnection();
@@ -48,6 +54,8 @@ public class LoginController {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        this.switchToUserScreen(isConnected.getText(), actionEvent);
 
     }
 
@@ -72,11 +80,24 @@ public class LoginController {
 
     }
 
-//    public boolean loginAuthorisation(String n){
-//
-//        if(n.equals("userauth")){
-//
-//
-//        }
-//    }
+    public void switchToUserScreen(String s, ActionEvent event) throws IOException {
+        FXMLLoader loader2=new FXMLLoader();
+
+        if(s.equals("Not Connected"))
+            loader2.setLocation(getClass().getResource("/error_window/errorw.fxml"));
+        else if(s.equals("Connected") && this.typeOfUser.equals("Super User"))
+            loader2.setLocation(getClass().getResource("/su_main/su_main.fxml"));
+        else if(s.equals("Connected") && this.typeOfUser.equals("Warehouse Admin"))
+            loader2.setLocation(getClass().getResource("/warehouse_main1/waremain1.fxml"));
+        else if(s.equals("Connected") && this.typeOfUser.equals("Store Admin"))
+            loader2.setLocation(getClass().getResource("/store_main/storemain.fxml"));
+
+        Parent user_page=loader2.load();
+        Scene user_scene=new Scene(user_page);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(user_scene);
+        window.show();
+    }
+
+
 }
