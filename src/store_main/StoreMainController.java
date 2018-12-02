@@ -17,6 +17,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import store_order.StoreOrderController;
 import update_category.UpdateCategoryController;
 import update_d.UpdateDController;
 
@@ -81,7 +82,20 @@ public class StoreMainController implements Initializable {
         manage.show();
     }
 
-    public void generateOrdersButtonClicked(ActionEvent actionEvent) {
+    public void generateOrdersButtonClicked(ActionEvent actionEvent) throws Exception {
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getResource("/store_order/storeorder.fxml"));
+        Parent wmain_page = loader.load();
+        Scene wmain_scene = new Scene(wmain_page);
+
+        StoreOrderController w=loader.getController();
+
+        w.setPlace(this.store);
+
+        Stage manage=new Stage();
+        manage.initModality(Modality.APPLICATION_MODAL);
+        manage.setScene(wmain_scene);
+        manage.show();
     }
 
     public void updateDButtonClicked(ActionEvent actionEvent) throws IOException {

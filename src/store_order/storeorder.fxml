@@ -21,7 +21,7 @@
                     <TableColumn fx:id="add" prefWidth="146.0" />
                 </columns>
             </TableView>
-            <Button layoutX="432.0" layoutY="305.0" mnemonicParsing="false" text="View Order" />
+            <Button fx:id="view" onAction="#viewOrderButtonClicked" layoutX="432.0" layoutY="305.0" mnemonicParsing="false" text="View Order" />
             <Label layoutX="72.0" layoutY="310.0" text="Select expected date" />
             <DatePicker layoutX="209.0" layoutY="305.0" prefHeight="27.0" prefWidth="115.0" />
         </children>
