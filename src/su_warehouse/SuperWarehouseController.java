@@ -65,7 +65,6 @@ public class SuperWarehouseController implements Initializable {
         loader.setLocation(getClass().getResource("/add_warehouse/add_ware.fxml"));
         Parent wmain_page = loader.load();
         Scene wmain_scene = new Scene(wmain_page);
-
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         window.setScene(wmain_scene);
         window.show();
