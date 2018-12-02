@@ -14,6 +14,9 @@ import login.LoginController;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
+/**
+ * Class for login in Super user, Warehouse admins, Store admins and the buyer
+ */
 public class InitialController {
 
     @FXML private Button SuperUser;
@@ -21,6 +24,11 @@ public class InitialController {
     @FXML private Button StoreAdmin;
     @FXML private Button Guest;
 
+    /**
+     * Function to redirect to the main login page
+     * @param actionEvent for detecting button click
+     * @throws IOException known thrown exception by the code
+     */
     public void buttonClickedForLogin(ActionEvent actionEvent) throws IOException {
             FXMLLoader loader=new FXMLLoader();
             loader.setLocation(getClass().getResource("/login/sign_in.fxml"));
@@ -38,6 +46,11 @@ public class InitialController {
 
     }
 
+    /**
+     * Specifically for guest redirection
+     * @param actionEvent for detecting button click
+     * @throws IOException known thrown exception by the program
+     */
     public void guestButtonClicked(ActionEvent actionEvent) throws IOException{
             FXMLLoader loader=new FXMLLoader();
             loader.setLocation(getClass().getResource("/user_main/usermain.fxml"));

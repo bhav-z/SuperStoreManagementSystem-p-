@@ -14,6 +14,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+/**
+ * Controller class for Adding Warehouses
+ */
 @SuppressWarnings("ALL")
 public class AddWarehouseController {
     @FXML
@@ -23,6 +26,11 @@ public class AddWarehouseController {
     @FXML
     private TextField dinput; //YET TO BE IMPLEMENTED
 
+    /**
+     * Button to Add warehouse and make subsequent classes on sql server
+     * @param actionEvent argument to detect click on Add button
+     * @throws IOException known exception that is thrown
+     */
     public void addButtonClicked(ActionEvent actionEvent) throws IOException{
         //code to add warehouse
         ConnectionU connectionClass = new ConnectionU();
@@ -80,6 +88,9 @@ public class AddWarehouseController {
         window.close();
     }
 
+    /**
+     * Function to create the product table
+     */
     public void createProductsTable(){
         ConnectionU connectionClass = new ConnectionU();
         Connection connection=connectionClass.getConnection();

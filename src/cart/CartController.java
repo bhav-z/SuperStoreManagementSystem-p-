@@ -21,6 +21,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
+/**
+ * Controller class for Cart
+ */
 public class CartController implements Initializable {
 
     @FXML private TextField total;
@@ -31,6 +34,11 @@ public class CartController implements Initializable {
     @FXML private TableColumn delete;
     private ObservableList<Cart> data= FXCollections.observableArrayList();
 
+    /**
+     * Program to initialise the values in the cart, received from sql server
+     * @param url first argument
+     * @param rb second argument
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb){
         product.setCellValueFactory(new PropertyValueFactory<Cart, String>("name"));

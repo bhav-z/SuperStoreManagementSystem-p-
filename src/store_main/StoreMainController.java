@@ -29,6 +29,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
+/**
+ * Class for showing the main screen for Store admin
+ */
 public class StoreMainController implements Initializable {
 
 
@@ -81,6 +84,11 @@ public class StoreMainController implements Initializable {
     public void searchButtonClicked(ActionEvent actionEvent) throws IOException{
     }
 
+    /**
+     *
+     * @param actionEvent argument for detecting button click
+     * @throws IOException known thrown exception by the program
+     */
     public void addCategoryButtonClicked(ActionEvent actionEvent) throws IOException{
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("/add_category/addcategory.fxml"));
@@ -96,6 +104,11 @@ public class StoreMainController implements Initializable {
         manage.show();
     }
 
+    /**
+     * Function to redirect to order page
+     * @param actionEvent argument for detecting button click
+     * @throws Exception known thrown exception by the program
+     */
     public void generateOrdersButtonClicked(ActionEvent actionEvent) throws Exception {
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("/store_order/storeorder.fxml"));

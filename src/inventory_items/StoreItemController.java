@@ -25,6 +25,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Main screen for the Store admin which shows the Categories->Subcategories->Items in his store
+ */
 public class StoreItemController implements Initializable {
 
     @FXML private TableColumn id;
@@ -58,7 +61,11 @@ public class StoreItemController implements Initializable {
         this.subcategory =(Subcategory) selectedItem;
     }
 
-
+    /**
+     * Function to redirect to Add Category page
+     * @param actionEvent for detecting button click
+     * @throws IOException known thrown exception by the program
+     */
     public void addItemButtonClicked(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("/add_item/additem.fxml"));
@@ -76,10 +83,19 @@ public class StoreItemController implements Initializable {
         manage.show();
     }
 
+    /**
+     * function to delete chosen item
+     * @param actionEvent for detecting button click
+     */
     public void deleteButtonClicked(ActionEvent actionEvent) {
         //code to delete an item
     }
 
+    /**
+     * function to update chosen item
+     * @param actionEvent for detecting button click
+     * @throws IOException known thrown exception by the program
+     */
     public void updateButtonClicked(ActionEvent actionEvent) throws IOException{
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("/update_item/update_item.fxml"));
@@ -98,7 +114,10 @@ public class StoreItemController implements Initializable {
 
     }
 
-
+    /**
+     * Function to search for the written item
+     * @param actionEvent for detecting button click
+     */
     public void searchButtonClicked(ActionEvent actionEvent) {
     }
 }
