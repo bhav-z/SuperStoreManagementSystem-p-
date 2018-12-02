@@ -38,22 +38,41 @@ import java.util.ResourceBundle;
 
 public class WarehouseMainController implements Initializable {
 
-    @FXML
-    private Button search;
+    @FXML public Button view_button;
+    @FXML public Button update_button;
+    @FXML public Button delete_button;
+    @FXML public Button back_button;
+    @FXML private Button search;
     @FXML private Button add_category_button;
     @FXML private Button manage_orders_button;
     @FXML private Button update_d_button;
-    @FXML private TableColumn name;
-    @FXML private TableColumn id;
+    @FXML private TableColumn<Category,String> name;
+    @FXML private TableColumn<Category,Integer> id;
 
-    private ObservableList<ObservableList> data;//= FXCollections.observableArrayList(new ObservableList{}("Electronics"));
-    @FXML private TableView category_table_w;
+    private ObservableList<Category> data = FXCollections.observableArrayList();
+    @FXML private TableView<Category> category_table_w;
 
     private Warehouse warehouse;
 
     @Override
     public void initialize(URL url, ResourceBundle rb){
-        name.setCellValueFactory(new PropertyValueFactory<Category, String>("name_s"));
+        //System.out.println(this.warehouse.getName());
+        ConnectionU connectionClass = new ConnectionU();
+        Connection connection=connectionClass.getConnection();
+
+        name.setCellValueFactory(new PropertyValueFactory<Category, String>("name"));
+        id.setCellValueFactory(new PropertyValueFactory<Category, Integer>("id"));
+
+        String sql="SELECT * from "+this.warehouse.getName() +"_categories;"   ;
+        try {
+            Statement statement=connection.createStatement();
+            ResultSet resultSet=statement.executeQuery(sql);
+            while (resultSet.next()){
+                data.add(new Category(resultSet.getInt("id"),resultSet.getString("name") ));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         category_table_w.setItems(data);
     }
 
@@ -122,10 +141,13 @@ public class WarehouseMainController implements Initializable {
         Parent wmain_page = loader.load();
         Scene wmain_scene = new Scene(wmain_page);
 
+<<<<<<< HEAD
         StoreSubController w=loader.getController();
         w.setPlace(this.warehouse);
         w.setCategory(category_table_w.getSelectionModel().getSelectedItem());
 
+=======
+>>>>>>> 6c539d58b3f0da441653b8dcba981ee584cbf93d
 //        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
 //        window.setScene(wmain_scene);
 //        window.show();

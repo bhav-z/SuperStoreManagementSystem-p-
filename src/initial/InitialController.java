@@ -28,6 +28,7 @@ public class InitialController {
             Scene login_scene = new Scene(login_page);
             LoginController login=loader.getController();
             login.setTypeOfUser(((Button)actionEvent.getSource()).getText());
+        System.out.println(loader.getLocation());
 
             //This line gets the Stage information
             Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();

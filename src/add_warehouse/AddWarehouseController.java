@@ -20,6 +20,8 @@ public class AddWarehouseController {
     private Button add;
     @FXML
     private TextField name;
+    @FXML
+    private TextField dinput; //YET TO BE IMPLEMENTED
 
     public void addButtonClicked(ActionEvent actionEvent) throws IOException{
         //code to add warehouse
@@ -28,14 +30,23 @@ public class AddWarehouseController {
         try {
             Statement statement=connection.createStatement();
             String warehousename1=name.getText().trim();
+            String Dinput=dinput.getText().trim();
             //THERES NO CONNECTION BETWEEN THE VALUES IN WAREHOUSE_LIST AND ITS SUBSEQUENT 3 TABLES
-            String sql0="INSERT INTO warehouse_list (name) VALUES ('"+warehousename1+"');";
+            String sql0="INSERT INTO warehouse_list" +
+                    " (name,id,warehouseD,if_order) " +
+                    "VALUES (" +
+                    "'"+warehousename1+"'," +
+                    "'"+warehousename1.hashCode()+"'," +
+                    "'"+Dinput+"'," +
+                    "'"+0+"'"+");";
             statement.executeUpdate(sql0);
             //https://stackoverflow.com/questions/6260688/how-do-i-use-cascade-delete-with-sql-server
             String sql1 =
                     "CREATE TABLE "+ warehousename1 +"_categories " +
-                            "(category_id INT NOT NULL , " +
-                            " category_name VARCHAR(100) PRIMARY KEY );";
+                            "(" +
+                            "category_id INT NOT NULL , " +
+                            " category_name VARCHAR(100) PRIMARY KEY " +
+                            ");";
             String sql2 =
                     "CREATE TABLE "+ warehousename1 +"_subcategories ( " +
                             " subcategory_id INT NOT NULL ," +

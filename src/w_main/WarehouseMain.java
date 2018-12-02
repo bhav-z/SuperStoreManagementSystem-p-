@@ -14,7 +14,7 @@ public class WarehouseMain extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("wmain.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("warehouse_main.fxml"));
         primaryStage.setTitle("WarehouseName");
         primaryStage.setScene(new Scene(root, 715, 383));
         primaryStage.show();
