@@ -1,5 +1,6 @@
 package w_main;
 
+import ConnectionUtil.ConnectionU;
 import MainClasses.Warehouse;
 import add_category.AddCategory;
 import add_category.AddCategoryController;
@@ -27,6 +28,10 @@ import w_manageorder.OrderAlertController;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 
 public class WarehouseMainController implements Initializable {
@@ -137,6 +142,24 @@ public class WarehouseMainController implements Initializable {
 
     public void deleteButtonClicked(ActionEvent actionEvent) throws IOException{
         //code to delete category
+        /*
+        ConnectionU connectionClass = new ConnectionU();
+        Connection connection=connectionClass.getConnection();
+        try {
+            Statement statement=connection.createStatement();
+            String tableName="";
+            String sql = "SELECT * FROM "+tableName+" WHERE username = '"+usernameField.getText()+"' AND password = '"+passwordField.getText()+"';";
+            ResultSet resultSet=statement.executeQuery(sql);
+            if(resultSet.next()){
+                //isConnected.setText("Connected");
+            }
+            else {
+                //isConnected.setText("Not Connected");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        */
     }
 
 }

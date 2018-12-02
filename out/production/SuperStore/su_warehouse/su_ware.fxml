@@ -10,13 +10,10 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="386.0" prefWidth="715.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="su_warehouse.SuperWarehouseController">
     <children>
-        <TableView fx:id="ware_table" layoutX="69.0" layoutY="100.0" prefHeight="200.0" prefWidth="601.0">
+        <TableView fx:id="ware_table" layoutX="69.0" layoutY="100.0" prefHeight="200.0" prefWidth="420.0">
             <columns>
-                <TableColumn fx:id="storenamee" prefWidth="120.0" text="Warehouse Name" />
-                <TableColumn fx:id="storeidd" prefWidth="120.0" text="Warehouse ID" />
-                <TableColumn fx:id="vieww" prefWidth="120.0" />
-                <TableColumn fx:id="linkk" prefWidth="120.0" />
-                <TableColumn fx:id="deletee" prefWidth="120.0" />
+                <TableColumn fx:id="ware_name" prefWidth="264.0" text="Warehouse Name" />
+                <TableColumn fx:id="ware_id" minWidth="0.0" prefWidth="155.0" text="Warehouse ID" />
             </columns>
         </TableView>
         <TextField layoutX="69.0" layoutY="52.0" prefHeight="27.0" prefWidth="478.0" />
@@ -26,7 +23,10 @@
             </menus>
         </MenuBar>
         <Button layoutX="574.0" layoutY="52.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="96.0" text="Search" />
-        <Button layoutX="495.0" layoutY="326.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="175.0" text="Add New Warehouse" />
+        <Button fx:id="add_warehouse" onAction="#addButtonClicked" layoutX="495.0" layoutY="326.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="175.0" text="Add New Warehouse" />
         <Button layoutX="69.0" layoutY="326.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="116.0" text="Back" />
+      <Button layoutX="538.0" layoutY="152.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="116.0" text="View" />
+      <Button layoutX="538.0" layoutY="193.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="116.0" text="Delete" />
+      <Button layoutX="538.0" layoutY="235.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="116.0" text="Link" />
     </children>
 </AnchorPane>
