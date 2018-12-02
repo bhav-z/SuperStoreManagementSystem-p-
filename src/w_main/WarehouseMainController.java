@@ -1,6 +1,7 @@
 package w_main;
 
 import ConnectionUtil.ConnectionU;
+import MainClasses.Category;
 import MainClasses.Warehouse;
 import add_category.AddCategory;
 import add_category.AddCategoryController;
@@ -42,23 +43,18 @@ public class WarehouseMainController implements Initializable {
     @FXML private Button add_category_button;
     @FXML private Button manage_orders_button;
     @FXML private Button update_d_button;
-    @FXML
-    private TableView category_table_w;
     @FXML private TableColumn name;
     @FXML private TableColumn id;
 
-    private ObservableList<Store> data= FXCollections.observableArrayList(new Store("Electronics"));
+    private ObservableList<ObservableList> data;//= FXCollections.observableArrayList(new ObservableList{}("Electronics"));
+    @FXML private TableView category_table_w;
 
     private Warehouse warehouse;
 
-
     @Override
     public void initialize(URL url, ResourceBundle rb){
-//        namee.setCellValueFactory(new PropertyValueFactory<Store, String>("category_name"));
-//        updatee.setCellValueFactory(new PropertyValueFactory<Store, String>("update"));
-//        deletee.setCellValueFactory(new PropertyValueFactory<Store, String>("delete"));
-//        go.setCellValueFactory(new PropertyValueFactory<Store, String>("view"));
-//        category_tablee.setItems(data);
+        name.setCellValueFactory(new PropertyValueFactory<Category, String>("name_s"));
+        category_table_w.setItems(data);
     }
 
     public void setWarehouse(Warehouse w){
@@ -159,24 +155,22 @@ public class WarehouseMainController implements Initializable {
     public void deleteButtonClicked(ActionEvent actionEvent) throws IOException{
 
         //code to delete category
-        /*
+        Category c=(Category) category_table_w.getSelectionModel().getSelectedItem();
+        String c_name=c.getName();
+
         ConnectionU connectionClass = new ConnectionU();
         Connection connection=connectionClass.getConnection();
         try {
             Statement statement=connection.createStatement();
-            String tableName="";
-            String sql = "SELECT * FROM "+tableName+" WHERE username = '"+usernameField.getText()+"' AND password = '"+passwordField.getText()+"';";
-            ResultSet resultSet=statement.executeQuery(sql);
-            if(resultSet.next()){
-                //isConnected.setText("Connected");
-            }
-            else {
-                //isConnected.setText("Not Connected");
-            }
+            String tableName=this.warehouse.getName();
+            System.out.println(tableName+" "+c_name);
+            String sql = "DELETE FROM "+tableName+"_categories WHERE "+tableName+"_categories.category_name = '"+c_name+"';";
+            statement.executeUpdate(sql);
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        */
+
     }
 
     public void backButtonClicked(ActionEvent actionEvent) throws IOException{

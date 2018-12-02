@@ -60,7 +60,7 @@ public class WareMain1Controller implements Initializable {
 
         WarehouseMainController w=loader.getController();
         Warehouse w2=new Warehouse();
-        w2.setName(comboString.getSelectionModel().toString());
+        w2.setName(comboString.getValue().toString());
         w.setWarehouse(w2);
 
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
