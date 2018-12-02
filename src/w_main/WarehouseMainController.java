@@ -124,6 +124,7 @@ public class WarehouseMainController implements Initializable {
 
         StoreSubController w=loader.getController();
         w.setPlace(this.warehouse);
+        w.setCategory(category_table_w.getSelectionModel().getSelectedItem());
 
 //        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
 //        window.setScene(wmain_scene);
@@ -142,10 +143,8 @@ public class WarehouseMainController implements Initializable {
 
         UpdateCategoryController w=loader.getController();
         w.setPlace(this.warehouse);
+        w.setCategory(category_table_w.getSelectionModel().getSelectedItem());
 
-//        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-//        window.setScene(wmain_scene);
-//        window.show();
         Stage manage=new Stage();
         manage.initModality(Modality.APPLICATION_MODAL);
         manage.setScene(wmain_scene);
