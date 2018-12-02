@@ -55,7 +55,10 @@ public class OrderAlertController implements Initializable {
         this.warehouse=w;
     }
 
-
+    /**
+     * all changes are saved and window terminated
+     * @param actionEvent
+     */
     public void doneButtonClicked(ActionEvent actionEvent) {
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         window.close();

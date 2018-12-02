@@ -54,6 +54,12 @@ public class WarehouseMainController implements Initializable {
 
     private Warehouse warehouse;
 
+    /**
+     * method to populate the category table
+     * @param url
+     * @param rb
+     */
+
     @Override
     public void initialize(URL url, ResourceBundle rb){
         //System.out.println(this.warehouse.getName());
@@ -76,6 +82,11 @@ public class WarehouseMainController implements Initializable {
         category_table_w.setItems(data);
     }
 
+    /**
+     * sets current warehouse
+     * @param w
+     */
+
     public void setWarehouse(Warehouse w){
         this.warehouse=w;
         //check with database and get warehouse id
@@ -85,6 +96,12 @@ public class WarehouseMainController implements Initializable {
 
     public void searchButtonClicked(ActionEvent actionEvent) {
     }
+
+    /**
+     * switch to manageorder screen
+     * @param actionEvent
+     * @throws IOException
+     */
 
     public void manageOrdersButtonClicked(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader=new FXMLLoader();
@@ -98,6 +115,12 @@ public class WarehouseMainController implements Initializable {
         manage.setScene(wmain_scene);
         manage.show();
     }
+
+    /**
+     * switch to updateD screen
+     * @param actionEvent
+     * @throws IOException
+     */
 
     public void updateDButtonClicked(ActionEvent actionEvent) throws IOException{
         FXMLLoader loader=new FXMLLoader();
@@ -117,6 +140,12 @@ public class WarehouseMainController implements Initializable {
         manage.show();
     }
 
+    /**
+     * switch to addCategory screen
+     * @param actionEvent
+     * @throws IOException
+     */
+
     public void addCategoryButtonClicked(ActionEvent actionEvent) throws IOException{
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("/add_category/addcategory.fxml"));
@@ -134,6 +163,12 @@ public class WarehouseMainController implements Initializable {
         manage.setScene(wmain_scene);
         manage.show();
     }
+
+    /**
+     * switch to subcategory view of the selected category
+     * @param actionEvent
+     * @throws IOException
+     */
 
     public void viewButtonClicked(ActionEvent actionEvent) throws IOException{
         FXMLLoader loader=new FXMLLoader();
@@ -155,6 +190,12 @@ public class WarehouseMainController implements Initializable {
         manage.show();
     }
 
+    /**
+     * switch to updateCAtegory screen
+     * @param actionEvent
+     * @throws IOException
+     */
+
     public void updateButtonClicked(ActionEvent actionEvent) throws IOException{
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("/update_category/update_category.fxml"));
@@ -170,6 +211,12 @@ public class WarehouseMainController implements Initializable {
         manage.setScene(wmain_scene);
         manage.show();
     }
+
+    /**
+     * Delete selected category
+     * @param actionEvent
+     * @throws IOException
+     */
 
     public void deleteButtonClicked(ActionEvent actionEvent) throws IOException{
 
@@ -191,6 +238,12 @@ public class WarehouseMainController implements Initializable {
         }
 
     }
+
+    /**
+     * go back to select which warehouse to visit
+     * @param actionEvent
+     * @throws IOException
+     */
 
     public void backButtonClicked(ActionEvent actionEvent) throws IOException{
         FXMLLoader loader=new FXMLLoader();

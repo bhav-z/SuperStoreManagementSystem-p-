@@ -15,14 +15,26 @@ public class UpdateSubcategoryController {
 
     private Subcategory subcategory;
 
+    /**
+     * set current warehouse/store
+     * @param place
+     */
     public void setPlace(Place place) {
         this.place=place;
     }
 
+    /**
+     * set current subcategory
+     * @param subcategory
+     */
     public void setSubcategory(Subcategory subcategory) {
         this.subcategory = subcategory;
     }
 
+    /**
+     * update subcategory
+     * @param actionEvent
+     */
     public void updateButtonClicked(ActionEvent actionEvent) {
         text.setText(this.subcategory.getName());
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();

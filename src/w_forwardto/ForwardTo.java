@@ -6,6 +6,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
+/**
+ * class to run forwardto.fxml individually
+ */
+
 public class ForwardTo extends Application {
 
     public static void main(String[] args) {

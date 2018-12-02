@@ -6,6 +6,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * class to run warehouse_main.fxml individually
+ */
+
 public class WarehouseMain extends Application {
 
     public static void main(String[] args) {

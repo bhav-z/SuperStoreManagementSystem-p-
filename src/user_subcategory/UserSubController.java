@@ -35,13 +35,29 @@ public class UserSubController implements Initializable {
     private MainClasses.Store store;
     private Category category;
 
+    /**
+     * indicates current store
+     * @param store
+     */
+
     public void setStore(MainClasses.Store store) {
         this.store = store;
     }
 
+    /**
+     * indicates current category
+     * @param category
+     */
+
     public void setCategory(Category category) {
         this.category = category;
     }
+
+    /**
+     * populate subcategory table
+     * @param url
+     * @param rb
+     */
 
     @Override
     public void initialize(URL url, ResourceBundle rb){
@@ -53,6 +69,12 @@ public class UserSubController implements Initializable {
         category_table.setItems(data);
 
     }
+
+    /**
+     * to visit screen displaying items of selected category
+     * @param actionEvent
+     * @throws IOException
+     */
 
     public void exploreButtonClicked(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader=new FXMLLoader();
@@ -70,6 +92,12 @@ public class UserSubController implements Initializable {
         manage.setScene(wmain_scene);
         manage.show();
     }
+
+    /**
+     * to switch to cart view
+     * @param actionEvent
+     * @throws IOException
+     */
 
     public void goToCart(ActionEvent actionEvent) throws IOException{
         FXMLLoader loader=new FXMLLoader();

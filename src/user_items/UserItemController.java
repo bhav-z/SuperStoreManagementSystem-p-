@@ -39,18 +39,35 @@ public class UserItemController implements Initializable {
     private Category category;
     private Subcategory subcategory;
 
+    /**
+     * indicates current category
+     * @param category
+     */
     public void setCategory(Category category) {
         this.category = category;
     }
 
+    /**
+     * indicates current subcategory
+     * @param subcategory
+     */
     public void setSubcategory(Subcategory subcategory) {
         this.subcategory = subcategory;
     }
 
+    /**
+     * indicates current store
+     * @param store
+     */
     public void setStore(MainClasses.Store store) {
         this.store=store;
     }
 
+    /**
+     * populate item table
+     * @param url
+     * @param rb
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb){
         filterCombo.setItems(list);
@@ -62,7 +79,11 @@ public class UserItemController implements Initializable {
 
     }
 
-
+    /**
+     * view details of selected product
+     * @param actionEvent
+     * @throws IOException
+     */
     public void viewButtonClicked(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("/user_product/userproduct.fxml"));
@@ -81,6 +102,11 @@ public class UserItemController implements Initializable {
         manage.show();
     }
 
+    /**
+     * view cart
+     * @param actionEvent
+     * @throws IOException
+     */
     public void goToCart(ActionEvent actionEvent) throws IOException{
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("/cart/cart.fxml"));

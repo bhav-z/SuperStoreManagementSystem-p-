@@ -46,10 +46,19 @@ public class UserMainController implements Initializable {
 
     }
 
+    /**
+     * indicates current store
+     * @param store
+     */
     public void setStore(MainClasses.Store store) {
         this.store = store;
     }
 
+    /**
+     * switch to subcategories of selected category
+     * @param actionEvent
+     * @throws IOException
+     */
     public void exploreButtonClicked(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("/user_subcategory/usersub.fxml"));
@@ -66,6 +75,11 @@ public class UserMainController implements Initializable {
         manage.show();
     }
 
+    /**
+     * view cart
+     * @param actionEvent
+     * @throws IOException
+     */
     public void goToCart(ActionEvent actionEvent) throws IOException{
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("/cart/cart.fxml"));

@@ -30,18 +30,34 @@ public class UserProductController implements Initializable {
     private Subcategory subcategory;
     private Item item;
 
+    /**
+     * indicates current item
+     * @param item
+     */
     public void setItem(Item item) {
         this.item = item;
     }
 
+    /**
+     * indicates current category
+     * @param category
+     */
     public void setCategory(Category category) {
         this.category = category;
     }
 
+    /**
+     * indicates current subcategory
+     * @param subcategory
+     */
     public void setSubcategory(Subcategory subcategory) {
         this.subcategory = subcategory;
     }
 
+    /**
+     * indicates current store
+     * @param store
+     */
     public void setStore(MainClasses.Store store) {
         this.store=store;
     }

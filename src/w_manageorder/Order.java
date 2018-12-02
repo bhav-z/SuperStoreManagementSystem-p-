@@ -3,6 +3,9 @@ package w_manageorder;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.control.Button;
 
+/**
+ * Testclass for UI
+ */
 public class Order {
 
     private SimpleStringProperty sname;

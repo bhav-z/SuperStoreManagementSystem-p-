@@ -32,6 +32,11 @@ public class WareMain1Controller implements Initializable {
     ResultSet resultSet;
     //private ObservableList<Warehouse> comboData;
 
+    /**
+     * method to populate the comboBox
+     * @param location
+     * @param resources
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
@@ -48,6 +53,12 @@ public class WareMain1Controller implements Initializable {
         }
     }
 
+    /**
+     * Method to proceed to the selected warehouse's dashboard
+     * @param actionEvent
+     * @throws IOException
+     * @throws InvocationTargetException
+     */
     public void proceed1ButtonClicked(ActionEvent actionEvent) throws IOException, InvocationTargetException {
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("/w_main/warehouse_main.fxml"));

@@ -31,6 +31,11 @@ public class UserFirstController implements Initializable {
     ResultSet resultSet;
     //private ObservableList<Warehouse> comboData;
 
+    /**
+     * populate select store comboBox
+     * @param location
+     * @param resources
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
@@ -47,6 +52,13 @@ public class UserFirstController implements Initializable {
         }
     }
 
+
+    /**
+     * proceed to browse selected store
+     * @param actionEvent
+     * @throws IOException
+     * @throws InvocationTargetException
+     */
     public void proceedButtonClicked(ActionEvent actionEvent) throws IOException, InvocationTargetException {
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("/w_main/warehouse_main.fxml"));
