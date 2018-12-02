@@ -106,7 +106,7 @@ public class WarehouseMainController implements Initializable {
         Scene wmain_scene = new Scene(wmain_page);
 
         UpdateDController w=loader.getController();
-        w.setWarehouse(this.warehouse);
+        w.setPlace(this.warehouse);
 
 //        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
 //        window.setScene(wmain_scene);
@@ -124,7 +124,7 @@ public class WarehouseMainController implements Initializable {
         Scene wmain_scene = new Scene(wmain_page);
 
         AddCategoryController w=loader.getController();
-        w.setWarehouse(this.warehouse);
+        w.setPlace(this.warehouse);
 
 //        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
 //        window.setScene(wmain_scene);
