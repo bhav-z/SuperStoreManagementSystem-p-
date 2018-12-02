@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="wmain1 linking and data transfer">
-      <change afterPath="$PROJECT_DIR$/src/add_warehouse/AddWarehouseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/add_warehouse/add_ware.fxml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="table">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/su_main/SuperMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/su_main/SuperMainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/su_main/su_main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/su_main/su_main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/su_warehouse/SuperWarehouseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/su_warehouse/SuperWarehouseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/su_warehouse/su_ware.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/su_warehouse/su_ware.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SuperStore/MainClasses/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SuperStore/add_category/AddCategoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SuperStore/add_subcategory/addsub.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SuperStore/add_subcategory/addsub.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SuperStore/inventory_subcategory/StoreSubController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SuperStore/update_d/UpdateDController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SuperStore/w_main/WarehouseMainController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SuperStore/w_main/wmain.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SuperStore/w_main/wmain.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SuperStore/w_manageorder/OrderAlertController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SuperStore/warehouse_main1/WareMain1Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SuperStore/warehouse_main1/WareMain1Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/add_warehouse/AddWarehouseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/add_warehouse/AddWarehouseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/add_warehouse/add_ware.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/add_warehouse/add_ware.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/w_main/WarehouseMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/w_main/WarehouseMainController.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -119,64 +126,65 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="fxml" value="2" />
-          <entry key="java" value="91" />
+          <entry key="fxml" value="20" />
+          <entry key="java" value="116" />
           <entry key="png" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="91" />
-          <entry key="XML" value="2" />
+          <entry key="JAVA" value="116" />
+          <entry key="XML" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="678" />
+          <entry key="fxml" value="34" />
+          <entry key="java" value="1210" />
+          <entry key="txt" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="678" />
+          <entry key="JAVA" value="1198" />
+          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="SQL" value="12" />
+          <entry key="XML" value="34" />
         </counts>
       </usages-collector>
     </session>
     <session id="657494188">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="fxml" value="722" />
-          <entry key="java" value="3044" />
-          <entry key="txt" value="132" />
+          <entry key="fxml" value="97" />
+          <entry key="java" value="1078" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3044" />
-          <entry key="PLAIN_TEXT" value="132" />
-          <entry key="XML" value="722" />
+          <entry key="JAVA" value="1078" />
+          <entry key="XML" value="97" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="fxml" value="22" />
-          <entry key="java" value="28" />
+          <entry key="fxml" value="5" />
+          <entry key="java" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="28" />
-          <entry key="XML" value="22" />
+          <entry key="JAVA" value="3" />
+          <entry key="XML" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
-          <entry key="project.open.time.10" value="7" />
-          <entry key="project.open.time.11" value="2" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
     </session>
@@ -185,47 +193,21 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/w_main/WarehouseMainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="78" column="22" lean-forward="true" selection-start-line="68" selection-start-column="8" selection-end-line="78" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/su_first/su_first.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-          <provider editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/su_main/su_main.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/su_warehouse/su_ware.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+            <state relative-caret-position="245">
+              <caret line="161" column="8" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/su_warehouse/SuperWarehouseController.java">
+        <entry file="file://$PROJECT_DIR$/src/add_warehouse/AddWarehouseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="62" column="76" selection-start-line="62" selection-start-column="76" selection-end-line="62" selection-end-column="76" />
+            <state relative-caret-position="369">
+              <caret line="42" column="66" lean-forward="true" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -234,17 +216,17 @@
         <entry file="file://$PROJECT_DIR$/src/add_warehouse/add_ware.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+            <state relative-caret-position="312">
+              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/add_warehouse/AddWarehouseController.java">
+        <entry file="file://$PROJECT_DIR$/src/login/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+            <state relative-caret-position="423">
+              <caret line="56" column="9" lean-forward="true" selection-start-line="43" selection-start-column="8" selection-end-line="56" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -259,18 +241,16 @@
       <list>
         <option value="package-info" />
         <option value="JavaFXApplication" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>public</find>
+      <find>buttonClickedForLogin</find>
+      <find>warehousename</find>
     </findStrings>
-    <replaceStrings>
-      <replace />
-    </replaceStrings>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -284,9 +264,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/w_neworderalert/OrderAlert.java" />
+        <option value="$PROJECT_DIR$/src/w_manageorder/OrderAlert.java" />
+        <option value="$PROJECT_DIR$/src/w_alert/alert.fxml" />
+        <option value="$PROJECT_DIR$/src/w_alert/Alert.java" />
+        <option value="$PROJECT_DIR$/src/w_manageorder/OrderAlertController.java" />
+        <option value="$PROJECT_DIR$/src/w_alert/AlertController.java" />
+        <option value="$PROJECT_DIR$/src/su_main/SuperMainController.java" />
+        <option value="$PROJECT_DIR$/src/su_addnew/su_addnew.fxml" />
+        <option value="$PROJECT_DIR$/src/su_addnew/AddNew.java" />
+        <option value="$PROJECT_DIR$/src/su_store/su_store.fxml" />
         <option value="$PROJECT_DIR$/src/su_store/SuperStore.java" />
         <option value="$PROJECT_DIR$/src/su_store/SuperStoreController.java" />
+        <option value="$PROJECT_DIR$/src/su_warehouse/SuperWarehouseController.java" />
         <option value="$PROJECT_DIR$/src/su_warehouse/SuperWarehouse.java" />
+        <option value="$PROJECT_DIR$/src/su_warehouse/su_ware.fxml" />
         <option value="$PROJECT_DIR$/src/su_users/users.fxml" />
         <option value="$PROJECT_DIR$/src/w_manageorder/Order.java" />
         <option value="$PROJECT_DIR$/src/su_users/Users.java" />
@@ -295,12 +287,15 @@
         <option value="$PROJECT_DIR$/src/su_first/FirstController.java" />
         <option value="$PROJECT_DIR$/src/su_first/First.java" />
         <option value="$PROJECT_DIR$/src/store_main/Store.java" />
+        <option value="$PROJECT_DIR$/src/w_main/wmain.fxml" />
         <option value="$PROJECT_DIR$/src/w_main/WarehouseMain.java" />
         <option value="$PROJECT_DIR$/src/store_main/StoreMain.java" />
-        <option value="$PROJECT_DIR$/src/store_main/StoreMainController.java" />
         <option value="$PROJECT_DIR$/src/store_main/storemain.fxml" />
         <option value="$PROJECT_DIR$/src/inventory_subcategory/storesub.fxml" />
+        <option value="$PROJECT_DIR$/src/inventory_subcategory/StoreSubController.java" />
         <option value="$PROJECT_DIR$/src/inventory_subcategory/StoreSub.java" />
+        <option value="$PROJECT_DIR$/src/add_subcategory/addsub.fxml" />
+        <option value="$PROJECT_DIR$/src/su_main/su_main.fxml" />
         <option value="$PROJECT_DIR$/src/su_main/SuperMain.java" />
         <option value="$PROJECT_DIR$/src/add_item/additem.fxml" />
         <option value="$PROJECT_DIR$/src/README" />
@@ -308,33 +303,18 @@
         <option value="$PROJECT_DIR$/src/Store.java" />
         <option value="$PROJECT_DIR$/src/Inventory.java" />
         <option value="$PROJECT_DIR$/src/initial/trial.fxml" />
-        <option value="$PROJECT_DIR$/src/initial/initial.fxml" />
         <option value="$PROJECT_DIR$/src/login/sign_in.fxml" />
         <option value="$PROJECT_DIR$/src/initial/InitialController.java" />
-        <option value="$PROJECT_DIR$/src/error_window/errorw.fxml" />
-        <option value="$PROJECT_DIR$/src/error_window/ErrorWindowController.java" />
+        <option value="$PROJECT_DIR$/src/ConnectionUtil/ConnectionU.java" />
+        <option value="$PROJECT_DIR$/src/initial/initial.fxml" />
+        <option value="$PROJECT_DIR$/src/store_main/StoreMainController.java" />
+        <option value="$PROJECT_DIR$/src/user_main/UserMainController.java" />
         <option value="$PROJECT_DIR$/src/login/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/warehouse_main1/waremain1.fxml" />
-        <option value="$PROJECT_DIR$/src/MainClasses/Warehouse.java" />
-        <option value="$PROJECT_DIR$/src/MainClasses/Category.java" />
-        <option value="$PROJECT_DIR$/src/w_main/wmain.fxml" />
-        <option value="$PROJECT_DIR$/src/w_manageorder/OrderAlertController.java" />
-        <option value="$PROJECT_DIR$/src/update_d/UpdateDController.java" />
         <option value="$PROJECT_DIR$/src/warehouse_main1/WareMain1Controller.java" />
-        <option value="$PROJECT_DIR$/src/inventory_subcategory/StoreSubController.java" />
-        <option value="$PROJECT_DIR$/src/add_category/AddCategoryController.java" />
-        <option value="$PROJECT_DIR$/src/update_subcategory/update_subcategory.fxml" />
-        <option value="$PROJECT_DIR$/src/update_item/update_item.fxml" />
-        <option value="$PROJECT_DIR$/src/add_subcategory/addsub.fxml" />
-        <option value="$PROJECT_DIR$/src/update_category/update_category.fxml" />
-        <option value="$PROJECT_DIR$/src/update_category/UpdateCategoryController.java" />
+        <option value="$PROJECT_DIR$/src/warehouse_main1/waremain1.fxml" />
         <option value="$PROJECT_DIR$/src/w_main/WarehouseMainController.java" />
-        <option value="$PROJECT_DIR$/src/su_main/su_main.fxml" />
-        <option value="$PROJECT_DIR$/src/su_warehouse/su_ware.fxml" />
-        <option value="$PROJECT_DIR$/src/su_main/SuperMainController.java" />
-        <option value="$PROJECT_DIR$/src/add_warehouse/AddWarehouseController.java" />
         <option value="$PROJECT_DIR$/src/add_warehouse/add_ware.fxml" />
-        <option value="$PROJECT_DIR$/src/su_warehouse/SuperWarehouseController.java" />
+        <option value="$PROJECT_DIR$/src/add_warehouse/AddWarehouseController.java" />
       </list>
     </option>
   </component>
@@ -345,9 +325,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="952" />
+    <option name="width" value="976" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -361,25 +342,55 @@
         <subPane>
           <expand>
             <path>
-              <item name="SuperStoreManagementSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SuperStoreManagementSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="Login" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SuperStoreManagementSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SuperStoreManagementSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="Login" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Login" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Login" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Login" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SuperStoreManagementSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SuperStoreManagementSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="Login" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Login" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="add_warehouse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Login" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Login" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Login" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Login" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="su_warehouse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Login" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Login" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="update_d" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Login" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Login" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="w_main" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -393,8 +404,9 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543716088255" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543719648198" />
     <property name="dynamic.classpath" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -408,6 +420,122 @@
       <recent name="$PROJECT_DIR$/src/assets" />
     </key>
   </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/su_main/SuperMainController.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/su_main/su_main.fxml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/su_warehouse/SuperWarehouseController.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/su_warehouse/su_ware.fxml</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/add_warehouse/AddWarehouseController.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/add_warehouse/add_ware.fxml</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -420,7 +548,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.WarehouseMain">
+  <component name="RunManager" selected="Application.SuperWarehouse">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -439,20 +567,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddItem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="add_item.AddItem" />
-      <module name="SuperStore" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="add_item.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Initial" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="initial.Initial" />
       <module name="SuperStore" />
@@ -460,20 +574,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="initial.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ItemApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="item.ItemApp" />
-      <module name="SuperStore" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="item.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -497,13 +597,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SuperMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="su_main.SuperMain" />
+    <configuration name="SuperWarehouse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="su_warehouse.SuperWarehouse" />
       <module name="SuperStore" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="su_main.*" />
+          <option name="PATTERN" value="su_warehouse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="user_main.UserMain" />
+      <module name="SuperStore" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="user_main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WareMain1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="warehouse_main1.WareMain1" />
+      <module name="SuperStore" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="warehouse_main1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -562,19 +690,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.ItemApp" />
-      <item itemvalue="Application.AddItem" />
-      <item itemvalue="Application.SuperMain" />
       <item itemvalue="Application.Initial" />
+      <item itemvalue="Application.UserMain" />
+      <item itemvalue="Application.WareMain1" />
       <item itemvalue="Application.WarehouseMain" />
+      <item itemvalue="Application.SuperWarehouse" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SuperWarehouse" />
         <item itemvalue="Application.WarehouseMain" />
+        <item itemvalue="Application.WareMain1" />
         <item itemvalue="Application.Initial" />
-        <item itemvalue="Application.SuperMain" />
-        <item itemvalue="Application.AddItem" />
-        <item itemvalue="Application.ItemApp" />
+        <item itemvalue="Application.UserMain" />
       </list>
     </recent_temporary>
   </component>
@@ -600,77 +728,34 @@
       <workItem from="1543680227935" duration="1484000" />
       <workItem from="1543682047049" duration="589000" />
       <workItem from="1543685369818" duration="1243000" />
-      <workItem from="1543693245470" duration="1454000" />
-      <workItem from="1543699127214" duration="1380000" />
-      <workItem from="1543700971243" duration="1725000" />
-      <workItem from="1543702908100" duration="385000" />
-      <workItem from="1543705747531" duration="1651000" />
-      <workItem from="1543707601422" duration="1783000" />
-      <workItem from="1543709426662" duration="1791000" />
-      <workItem from="1543711250769" duration="777000" />
-      <workItem from="1543714604368" duration="1279000" />
+      <workItem from="1543693245470" duration="455000" />
     </task>
-    <task id="LOCAL-00001" summary="linking initial and login">
-      <created>1543693829441</created>
+    <task id="LOCAL-00001" summary="ok2">
+      <created>1543701144511</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1543693829441</updated>
+      <updated>1543701144511</updated>
     </task>
-    <task id="LOCAL-00002" summary="login and first screens for users">
-      <created>1543700992070</created>
+    <task id="LOCAL-00002" summary="table">
+      <created>1543705879282</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1543700992070</updated>
+      <updated>1543705879282</updated>
     </task>
-    <task id="LOCAL-00003" summary="login error message">
-      <created>1543701914630</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1543701914630</updated>
-    </task>
-    <task id="LOCAL-00004" summary="login error message update">
-      <created>1543702658928</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1543702658928</updated>
-    </task>
-    <task id="LOCAL-00005" summary="login error message update2">
-      <created>1543703052508</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1543703052508</updated>
-    </task>
-    <task id="LOCAL-00006" summary="wmain1 linking and data transfer">
-      <created>1543707292496</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1543707292496</updated>
-    </task>
-    <task id="LOCAL-00007" summary="wmain1 linking and data transfer">
-      <created>1543711868543</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1543711868543</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71061000" />
+    <option name="totallyTimeSpent" value="78043000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Learn" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.6703755" visible="true" weight="0.15379113" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.6703755" visible="true" weight="0.15896885" />
       <window_info id="Structure" order="2" weight="0.24964234" />
       <window_info id="Favorites" order="3" />
       <window_info id="Designer" order="4" />
@@ -680,20 +765,20 @@
       <window_info anchor="bottom" id="FindBugs-IDEA" order="0" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.30843374" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.30229884" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Application Servers" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32891566" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32988507" />
       <window_info anchor="bottom" id="Problems" order="10" />
       <window_info anchor="bottom" id="Changes" order="11" />
       <window_info anchor="bottom" id="Profiler" order="12" />
       <window_info anchor="bottom" id="Event Log" order="13" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.32891566" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32873562" />
       <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="16" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="16" />
       <window_info anchor="bottom" id="Inspection Results" order="17" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -706,6 +791,44 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Learn" order="0" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.6703755" visible="true" weight="0.15896885" />
+      <window_info id="Structure" order="2" weight="0.24964234" />
+      <window_info id="Favorites" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="UI Designer" order="6" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="0" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.30229884" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Application Servers" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32988507" />
+      <window_info anchor="bottom" id="Problems" order="10" />
+      <window_info anchor="bottom" id="Changes" order="11" />
+      <window_info anchor="bottom" id="Profiler" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="13" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32891566" />
+      <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="16" />
+      <window_info anchor="bottom" id="Inspection Results" order="17" weight="0.32891566" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24964234" />
+      <window_info anchor="right" id="JetGradle" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -716,78 +839,54 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <MESSAGE value="linking initial and login" />
-    <MESSAGE value="login and first screens for users" />
-    <MESSAGE value="login error message" />
-    <MESSAGE value="login error message update" />
-    <MESSAGE value="login error message update2" />
-    <MESSAGE value="wmain1 linking and data transfer" />
-    <option name="LAST_COMMIT_MESSAGE" value="wmain1 linking and data transfer" />
+    <MESSAGE value="ok2" />
+    <MESSAGE value="table" />
+    <option name="LAST_COMMIT_MESSAGE" value="table" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/add_subcategory/AddSubController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/add_category/AddCategory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/add_item/AddItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="14" column="59" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Category.java" />
+    <entry file="file://$PROJECT_DIR$/src/InventoriedItem.java" />
+    <entry file="file://$PROJECT_DIR$/src/Item.java" />
+    <entry file="file://$PROJECT_DIR$/src/Subcategory.java" />
+    <entry file="file://$PROJECT_DIR$/src/Cart.java" />
+    <entry file="file://$PROJECT_DIR$/src/Guest.java" />
+    <entry file="file://$PROJECT_DIR$/src/SuperUser.java" />
+    <entry file="file://$PROJECT_DIR$/src/User.java" />
+    <entry file="file://$PROJECT_DIR$/src/StoreAdmin.java" />
+    <entry file="file://$PROJECT_DIR$/src/WarehouseAdmin.java" />
     <entry file="file://$PROJECT_DIR$/src/Warehouse.java" />
     <entry file="file://$PROJECT_DIR$/src/Order.java" />
     <entry file="file://$PROJECT_DIR$/src/WarehouseInventory.java" />
     <entry file="file://$PROJECT_DIR$/src/StoreInventory.java" />
     <entry file="file://$PROJECT_DIR$/src/Store.java" />
     <entry file="file://$PROJECT_DIR$/src/Inventory.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home/lib/src.zip!/javafx.base/com/sun/javafx/event/EventHandlerManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="190" selection-start-line="190" selection-end-line="190" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/initial/trial.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/error_window/errorw.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/initial/initial.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/login/sign_in.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/error_window/ErrorWindowController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/initial/Initial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home/lib/src.zip!/javafx.base/com/sun/javafx/event/EventHandlerManager.java" />
+    <entry file="file://$PROJECT_DIR$/src/initial/trial.fxml" />
     <entry file="file://$PROJECT_DIR$/src/login/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -795,273 +894,196 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/login/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/src/login/login.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="118" column="9" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
+        <state relative-caret-position="495">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/forgot_password/Forgotpass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/error_window/ErrorWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/su_addnew/AddNewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/forgot_password/ForgotpassController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store_main/StoreMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/initial/InitialController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="35" column="26" selection-start-line="32" selection-start-column="12" selection-end-line="35" selection-end-column="26" />
+        <state relative-caret-position="201">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainClasses/Warehouse.java">
+    <entry file="file://$PROJECT_DIR$/src/initial/Initial.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        <state relative-caret-position="26">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainClasses/Guest.java">
+    <entry file="file://$PROJECT_DIR$/src/user_main/usermain.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user_main/UserMainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="286">
+          <caret line="31" column="88" selection-start-line="31" selection-start-column="88" selection-end-line="31" selection-end-column="88" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainClasses/Inventory.java">
+    <entry file="file://$PROJECT_DIR$/src/initial/initial.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="218">
+          <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainClasses/dbClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainClasses/InventoriedItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainClasses/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/store_main/storemain.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/store_main/StoreMainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="78">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/login/sign_in.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ConnectionUtil/ConnectionU.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/warehouse_main1/waremain1.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="63" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
+        <state relative-caret-position="234">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user_items/useritem.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/w_main/WarehouseMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/w_main/wmain.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="52" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/update_d/UpdateDController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/warehouse_main1/WareMain1Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+        <state relative-caret-position="1066">
+          <caret line="41" column="62" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/inventory_subcategory/StoreSubController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/add_category/AddCategoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/w_manageorder/OrderAlertController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/inventory_subcategory/storesub.fxml">
+    <entry file="file://$PROJECT_DIR$/src/user_product/userproduct.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/update_subcategory/UpdateSubcategoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/update_item/UpdateItemController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/update_subcategory/update_subcategory.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/update_d/updated.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/add_item/additem.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="38" selection-start-column="38" selection-end-column="38" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/add_category/addcategory.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="17" selection-start-line="10" selection-start-column="4" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/update_item/update_item.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/add_subcategory/addsub.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/update_category/update_category.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/update_category/UpdateCategoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/su_first/su_first.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/su_store/su_store.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/io/IOException.java">
+    <entry file="file://$PROJECT_DIR$/src/user_product/UserProduct.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/su_main/SuperMainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="36" column="78" selection-start-line="36" selection-start-column="78" selection-end-line="36" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/su_warehouse/SuperWarehouse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
+        <state relative-caret-position="104">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/su_main/su_main.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/login/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/add_warehouse/AddWarehouseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        <state relative-caret-position="423">
+          <caret line="56" column="9" lean-forward="true" selection-start-line="43" selection-start-column="8" selection-end-line="56" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/su_warehouse/su_ware.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/w_main/WarehouseMainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="78" column="22" lean-forward="true" selection-start-line="68" selection-start-column="8" selection-end-line="78" selection-end-column="22" />
+        <state relative-caret-position="245">
+          <caret line="161" column="8" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/add_warehouse/add_ware.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+        <state relative-caret-position="312">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/su_warehouse/SuperWarehouseController.java">
+    <entry file="file://$PROJECT_DIR$/src/add_warehouse/AddWarehouseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="62" column="76" selection-start-line="62" selection-start-column="76" selection-end-line="62" selection-end-column="76" />
+        <state relative-caret-position="369">
+          <caret line="42" column="66" lean-forward="true" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
         </state>
       </provider>
     </entry>

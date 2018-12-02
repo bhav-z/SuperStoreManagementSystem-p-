@@ -12,9 +12,9 @@
             <Menu mnemonicParsing="false" text="Logout" />
         </menus>
     </MenuBar>
-    <Button layoutX="125.0" layoutY="84.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="193.0" text="Stores" />
-    <Button layoutX="125.0" layoutY="123.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="193.0" text="Warehouses" />
-    <Button layoutX="125.0" layoutY="160.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="193.0" text="Users" />
+    <Button fx:id="stores" onAction="#storesButtonClicked" layoutX="125.0" layoutY="84.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="193.0" text="Stores" />
+    <Button fx:id="warehouses" onAction="#warehousesButtonClicked" layoutX="125.0" layoutY="123.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="193.0" text="Warehouses" />
+    <Button fx:id="#users" onAction="#usersButtonClicked" layoutX="125.0" layoutY="160.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="193.0" text="Users" />
     <!--<Button layoutX="125.0" layoutY="200.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="193.0" text="WarehouseAdmins" />-->
 </children>
 </AnchorPane>

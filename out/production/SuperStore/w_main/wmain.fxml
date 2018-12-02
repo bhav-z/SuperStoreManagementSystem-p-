@@ -9,29 +9,30 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="715.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="w_main.WarehouseMainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="w_main.WarehouseMainController">
     <children>
-        <TableView fx:id="category_tablee" layoutX="71.0" layoutY="100.0" prefHeight="200.0" prefWidth="597.0">
+        <TableView fx:id="category_table_w" layoutX="71.0" layoutY="100.0" prefHeight="200.0" prefWidth="388.0">
             <columns>
-                <TableColumn fx:id="namee" prefWidth="300.0" text="Category Name" />
-                <TableColumn fx:id="updatee" prefWidth="85.0" text="Update" />
-                <TableColumn fx:id="deletee" prefWidth="90.0" text="Delete" />
-            <TableColumn fx:id="go" prefWidth="120.0" text="Go" />
+                <TableColumn fx:id="name" prefWidth="300.0" text="Category Name" />
+                <TableColumn fx:id="id" prefWidth="85.0" text="ID" />
             </columns>
         </TableView>
-        <TextField layoutX="80.0" layoutY="43.0" prefHeight="27.0" prefWidth="470.0" />
-        <Button layoutX="570.0" layoutY="43.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" text="Search" />
-        <Button layoutX="425.0" layoutY="329.0" mnemonicParsing="false" text="Add Category" />
-        <Button layoutX="296.0" layoutY="329.0" mnemonicParsing="false" text="Manage Orders" />
-        <Button layoutX="203.0" layoutY="329.0" mnemonicParsing="false" text="Update D" />
-        <MenuBar prefHeight="29.0" prefWidth="715.0">
+        <TextField layoutX="80.0" layoutY="43.0" prefHeight="27.0" prefWidth="421.0" />
+        <Button fx:id="search" layoutX="524.0" layoutY="43.0" mnemonicParsing="false" onAction="#searchButtonClicked" prefHeight="27.0" prefWidth="83.0" text="Search" />
+        <Button fx:id="add_category_button" layoutX="495.0" layoutY="329.0" mnemonicParsing="false" onAction="#addCategoryButtonClicked" text="Add Category" />
+        <Button fx:id="manage_orders_button" layoutX="164.0" layoutY="329.0" mnemonicParsing="false" onAction="#manageOrdersButtonClicked" text="Manage Orders" />
+        <Button fx:id="update_d_button" layoutX="71.0" layoutY="329.0" mnemonicParsing="false" onAction="#updateDButtonClicked" text="Update D" />
+        <MenuBar prefHeight="29.0" prefWidth="679.0">
             <menus>
                 <Menu mnemonicParsing="false" text="Logout">
                     <graphic>
-                        <HBox prefHeight="29.0" prefWidth="627.0" />
+                        <HBox prefHeight="29.0" prefWidth="582.0" />
                     </graphic>
                 </Menu>
             </menus>
         </MenuBar>
+      <Button fx:id="view_button" onAction="#viewButtonClicked" layoutX="508.0" layoutY="138.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="77.0" text="View" />
+      <Button fx:id="update_button" onAction="#updateButtonClicked" layoutX="508.0" layoutY="185.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="77.0" text="Update" />
+      <Button fx:id="delete_button" onAction="#deleteButtonClicked" layoutX="508.0" layoutY="231.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="77.0" text="Delete" />
     </children>
 </AnchorPane>
