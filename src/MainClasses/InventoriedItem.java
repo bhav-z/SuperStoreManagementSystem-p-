@@ -1,5 +1,8 @@
 package MainClasses;
 
+/**
+ * Base Inventoried item class
+ */
 public class InventoriedItem extends Item{
 
     private int number_of_units;

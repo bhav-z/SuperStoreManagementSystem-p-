@@ -27,6 +27,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Class for modifying subcategories
+ */
 public class StoreSubController implements Initializable {
 
     @FXML
@@ -58,6 +61,11 @@ public class StoreSubController implements Initializable {
     public void searchButtonClicked(ActionEvent actionEvent) throws IOException{
     }
 
+    /**
+     * Function for adding subcategory in a chosen subcategory
+     * @param actionEvent argument for detecting button click
+     * @throws IOException known thrown exception by the program
+     */
     public void addSubcategoryButtonClicked(ActionEvent actionEvent) throws IOException{
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("/add_subcategory/addsub.fxml"));
@@ -74,6 +82,11 @@ public class StoreSubController implements Initializable {
         manage.show();
     }
 
+    /**
+     * Function to view the chosen subcategory
+     * @param actionEvent argument for detecting button click
+     * @throws IOException known thrown exception by the program
+     */
     public void viewButtonClicked(ActionEvent actionEvent) throws IOException{
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("/inventory_items/storeitem.fxml"));
@@ -90,7 +103,11 @@ public class StoreSubController implements Initializable {
         manage.setScene(wmain_scene);
         manage.show();
     }
-
+    /**
+     * Function to modify the chosen subcategory
+     * @param actionEvent argument for detecting button click
+     * @throws IOException known thrown exception by the program
+     */
     public void updateButtonClicked(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("/update_subcategory/update_subcategory.fxml"));
@@ -106,7 +123,11 @@ public class StoreSubController implements Initializable {
         manage.setScene(wmain_scene);
         manage.show();
     }
-
+    /**
+     * Function to delete the chosen subcategory
+     * @param actionEvent argument for detecting button click
+     * @throws IOException known thrown exception by the program
+     */
     public void deleteButtonClicked(ActionEvent actionEvent) throws IOException{
     }
 

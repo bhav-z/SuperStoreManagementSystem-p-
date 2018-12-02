@@ -6,6 +6,9 @@ import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.stage.Stage;
 
+/**
+ * Controller class for Adding Subcategory
+ */
 public class AddSubController {
 
     private Place place;
@@ -19,7 +22,10 @@ public class AddSubController {
         this.category=category;
     }
 
-
+    /**
+     *
+     * @param actionEvent argument to detect click on Add button
+     */
     public void addButtonClicked(ActionEvent actionEvent) {
         //code to add a subcategory, use the category variable to set category name
 

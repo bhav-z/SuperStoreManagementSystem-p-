@@ -22,14 +22,16 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+/**
+ * Class to deal with authentication in sign in process
+ */
 public class LoginController {
 
     private String typeOfUser="";
 
     @FXML
     private PasswordField passwordField;
-//    @FXML
-//    private Label infoEx;
+
     @FXML
     private TextField usernameField;
     @FXML
@@ -38,6 +40,12 @@ public class LoginController {
     protected void handleLoginButtonAction(ActionEvent event) throws SQLException {
         isConnected.setText("Not Connected"); // errorLabel is for showing errors with log in
     }
+
+    /**
+     * Function to authentication login for various user types
+     * @param actionEvent
+     * @throws IOException
+     */
     public void Login(ActionEvent actionEvent) throws IOException{
 //        isConnected.setText("Not Connected"); // errorLabel is for showing errors with log in
         ConnectionU connectionClass = new ConnectionU();
@@ -68,6 +76,10 @@ public class LoginController {
         return this.typeOfUser;
     }
 
+    /**
+     * Function that returns the table name
+     * @return Table name of the associated user type
+     */
     public String getUserTableName(){
         String a=this.typeOfUser;
         if(a.equals("Super User"))
@@ -81,6 +93,12 @@ public class LoginController {
 
     }
 
+    /**
+     * Function to switch user screens
+     * @param s Argument for the table name
+     * @param event argument for detecting button click
+     * @throws IOException known thrown exception by the program
+     */
     public void switchToUserScreen(String s, ActionEvent event) throws IOException {
         FXMLLoader loader2=new FXMLLoader();
         int i=0;

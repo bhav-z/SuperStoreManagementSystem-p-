@@ -1,5 +1,8 @@
 package MainClasses;
 
+/**
+ * Class for Store admin
+ */
 public class Store extends Place{
     private String name;
     private int ID;

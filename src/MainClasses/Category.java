@@ -4,6 +4,9 @@ import javafx.beans.property.SimpleStringProperty;
 
 import java.util.ArrayList;
 
+/**
+ * Base Category class
+ */
 public class Category {
 
     private String name;

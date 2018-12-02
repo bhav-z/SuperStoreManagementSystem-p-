@@ -11,6 +11,9 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+/**
+ * Controller class for Adding Item
+ */
 public class AddItemController {
 
     @FXML private TextField name;
@@ -37,7 +40,10 @@ public class AddItemController {
         this.sub = (Subcategory) sub;
     }
 
-
+    /**
+     *
+     * @param actionEvent argument to detect click on Add button
+     */
     public void addButtonClicked(ActionEvent actionEvent) {
         String Name=name.getText();
         String ID=id.getText();
@@ -48,7 +54,6 @@ public class AddItemController {
         String Units=units.getText();
 
         //code to add item to backend
-
 
         Stage win = (Stage)((Button)actionEvent.getSource()).getScene().getWindow();
         win.close();
