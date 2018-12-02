@@ -22,7 +22,7 @@
                 <TableColumn fx:id="forward" prefWidth="75.0" text="Forward" />
             </columns>
         </TableView>
-        <Button layoutX="703.0" layoutY="282.0" mnemonicParsing="false" text="Done" />
+        <Button fx:id="done" onAction="#doneButtonClicked" layoutX="703.0" layoutY="282.0" mnemonicParsing="false" text="Done" />
     </children>
 </AnchorPane>
 

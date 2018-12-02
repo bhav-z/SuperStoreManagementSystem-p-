@@ -3,8 +3,10 @@ package add_warehouse;
 import ConnectionUtil.ConnectionU;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -61,6 +63,9 @@ public class AddWarehouseController {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        window.close();
     }
 
     public void createProductsTable(){

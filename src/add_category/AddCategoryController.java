@@ -1,6 +1,9 @@
 package add_category;
 
 import MainClasses.Warehouse;
+import javafx.event.ActionEvent;
+import javafx.scene.Node;
+import javafx.stage.Stage;
 
 public class AddCategoryController {
 
@@ -8,5 +11,13 @@ public class AddCategoryController {
 
     public void setWarehouse(Warehouse warehouse) {
         this.warehouse = warehouse;
+    }
+
+
+    public void addButtonClicked(ActionEvent actionEvent) {
+        //code to add category
+
+        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        window.close();
     }
 }

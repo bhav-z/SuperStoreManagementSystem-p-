@@ -18,6 +18,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import store_main.Store;
 import update_category.UpdateCategoryController;
@@ -64,7 +65,7 @@ public class WarehouseMainController implements Initializable {
         this.warehouse=w;
         //check with database and get warehouse id
         int id=0;
-        this.warehouse.setId(id);
+        this.warehouse.setID(id);
     }
 
     public void searchButtonClicked(ActionEvent actionEvent) {
@@ -75,13 +76,12 @@ public class WarehouseMainController implements Initializable {
         loader.setLocation(getClass().getResource("/w_manageorder/neworderalert.fxml"));
         Parent wmain_page = loader.load();
         Scene wmain_scene = new Scene(wmain_page);
-
         OrderAlertController w=loader.getController();
         w.setWarehouse(this.warehouse);
-
-        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        window.setScene(wmain_scene);
-        window.show();
+        Stage manage=new Stage();
+        manage.initModality(Modality.APPLICATION_MODAL);
+        manage.setScene(wmain_scene);
+        manage.show();
     }
 
     public void updateDButtonClicked(ActionEvent actionEvent) throws IOException{
@@ -93,9 +93,13 @@ public class WarehouseMainController implements Initializable {
         UpdateDController w=loader.getController();
         w.setWarehouse(this.warehouse);
 
-        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        window.setScene(wmain_scene);
-        window.show();
+//        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+//        window.setScene(wmain_scene);
+//        window.show();
+        Stage manage=new Stage();
+        manage.initModality(Modality.APPLICATION_MODAL);
+        manage.setScene(wmain_scene);
+        manage.show();
     }
 
     public void addCategoryButtonClicked(ActionEvent actionEvent) throws IOException{
@@ -107,9 +111,13 @@ public class WarehouseMainController implements Initializable {
         AddCategoryController w=loader.getController();
         w.setWarehouse(this.warehouse);
 
-        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        window.setScene(wmain_scene);
-        window.show();
+//        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+//        window.setScene(wmain_scene);
+//        window.show();
+        Stage manage=new Stage();
+        manage.initModality(Modality.APPLICATION_MODAL);
+        manage.setScene(wmain_scene);
+        manage.show();
     }
 
     public void viewButtonClicked(ActionEvent actionEvent) throws IOException{
@@ -121,9 +129,13 @@ public class WarehouseMainController implements Initializable {
         StoreSubController w=loader.getController();
         w.setWarehouse(this.warehouse);
 
-        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        window.setScene(wmain_scene);
-        window.show();
+//        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+//        window.setScene(wmain_scene);
+//        window.show();
+        Stage manage=new Stage();
+        manage.initModality(Modality.APPLICATION_MODAL);
+        manage.setScene(wmain_scene);
+        manage.show();
     }
 
     public void updateButtonClicked(ActionEvent actionEvent) throws IOException{
@@ -133,14 +145,19 @@ public class WarehouseMainController implements Initializable {
         Scene wmain_scene = new Scene(wmain_page);
 
         UpdateCategoryController w=loader.getController();
-        w.setWarehouse(this.warehouse);
+        w.setPlace(this.warehouse);
 
-        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        window.setScene(wmain_scene);
-        window.show();
+//        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+//        window.setScene(wmain_scene);
+//        window.show();
+        Stage manage=new Stage();
+        manage.initModality(Modality.APPLICATION_MODAL);
+        manage.setScene(wmain_scene);
+        manage.show();
     }
 
     public void deleteButtonClicked(ActionEvent actionEvent) throws IOException{
+
         //code to delete category
         /*
         ConnectionU connectionClass = new ConnectionU();
@@ -162,4 +179,14 @@ public class WarehouseMainController implements Initializable {
         */
     }
 
+    public void backButtonClicked(ActionEvent actionEvent) throws IOException{
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getResource("/warehouse_main1/waremain1.fxml"));
+        Parent wmain_page = loader.load();
+        Scene wmain_scene = new Scene(wmain_page);
+
+        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        window.setScene(wmain_scene);
+        window.show();
+    }
 }

@@ -1,6 +1,6 @@
 package MainClasses;
 
-public class Store {
+public class Store extends Place{
     private String name;
     private int ID;
     private int capacity;
@@ -9,10 +9,29 @@ public class Store {
     public void changeWarehouse(Warehouse neeu){
         linked_warehouse=neeu;
     }
-    public Store(String n, int id) {
-        this.name = n;
-        this.ID = id;
+    public Store() {
     }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public int getID() {
+        return ID;
+    }
+
+    @Override
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
     public Order getItemsToOrder(){
         return  new Order();
     }

@@ -3,11 +3,14 @@ package w_manageorder;
 import MainClasses.Warehouse;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -50,5 +53,11 @@ public class OrderAlertController implements Initializable {
 
     public void setWarehouse(Warehouse w){
         this.warehouse=w;
+    }
+
+
+    public void doneButtonClicked(ActionEvent actionEvent) {
+        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        window.close();
     }
 }

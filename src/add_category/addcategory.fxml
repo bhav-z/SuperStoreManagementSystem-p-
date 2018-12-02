@@ -14,7 +14,7 @@
         <children>
             <Label layoutX="59.0" layoutY="53.0" text="Category Name" />
             <TextField layoutX="205.0" layoutY="48.0" prefHeight="27.0" prefWidth="174.0" />
-            <Button layoutX="351.0" layoutY="130.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="68.0" text="Add" />
+            <Button fx:id="add" onAction="#addButtonClicked" layoutX="351.0" layoutY="130.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="68.0" text="Add" />
         </children>
     </AnchorPane>
 

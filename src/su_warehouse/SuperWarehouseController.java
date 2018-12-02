@@ -13,6 +13,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import w_manageorder.Order;
 import w_manageorder.OrderAlertController;
@@ -65,9 +66,10 @@ public class SuperWarehouseController implements Initializable {
         loader.setLocation(getClass().getResource("/add_warehouse/add_ware.fxml"));
         Parent wmain_page = loader.load();
         Scene wmain_scene = new Scene(wmain_page);
-        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        window.setScene(wmain_scene);
-        window.show();
+        Stage manage=new Stage();
+        manage.initModality(Modality.APPLICATION_MODAL);
+        manage.setScene(wmain_scene);
+        manage.show();
     }
 }
 
