@@ -71,5 +71,24 @@ public class SuperWarehouseController implements Initializable {
         manage.setScene(wmain_scene);
         manage.show();
     }
+
+    public void viewButtonClicked(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getResource("/w_main/.fxml"));
+        Parent wmain_page = loader.load();
+        Scene wmain_scene = new Scene(wmain_page);
+        Stage manage=new Stage();
+        manage.initModality(Modality.APPLICATION_MODAL);
+        manage.setScene(wmain_scene);
+        manage.show();
+    }
+
+    public void deleteButtonClicked(ActionEvent actionEvent) {
+        //code for deleting a warehouse
+    }
+
+    public void linkButtonClicked(ActionEvent actionEvent) {
+        //code for changing store link
+    }
 }
 

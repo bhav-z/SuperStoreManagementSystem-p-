@@ -1,5 +1,6 @@
 package update_d;
 
+import MainClasses.Place;
 import MainClasses.Warehouse;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
@@ -7,9 +8,9 @@ import javafx.stage.Stage;
 
 public class UpdateDController {
 
-    private Warehouse warehouse;
+    private Place warehouse;
 
-    public void setWarehouse(Warehouse warehouse) {
+    public void setPlace(Place warehouse) {
         this.warehouse = warehouse;
     }
 

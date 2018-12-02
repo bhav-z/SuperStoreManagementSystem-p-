@@ -106,7 +106,7 @@ public class WarehouseMainController implements Initializable {
         Scene wmain_scene = new Scene(wmain_page);
 
         UpdateDController w=loader.getController();
-        w.setWarehouse(this.warehouse);
+        w.setPlace(this.warehouse);
 
 //        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
 //        window.setScene(wmain_scene);
@@ -124,7 +124,7 @@ public class WarehouseMainController implements Initializable {
         Scene wmain_scene = new Scene(wmain_page);
 
         AddCategoryController w=loader.getController();
-        w.setWarehouse(this.warehouse);
+        w.setPlace(this.warehouse);
 
 //        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
 //        window.setScene(wmain_scene);
@@ -140,6 +140,11 @@ public class WarehouseMainController implements Initializable {
         loader.setLocation(getClass().getResource("/inventory_subcategory/storesub.fxml"));
         Parent wmain_page = loader.load();
         Scene wmain_scene = new Scene(wmain_page);
+
+        StoreSubController w=loader.getController();
+        w.setPlace(this.warehouse);
+        w.setCategory(category_table_w.getSelectionModel().getSelectedItem());
+
 
 //        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
 //        window.setScene(wmain_scene);
@@ -158,10 +163,8 @@ public class WarehouseMainController implements Initializable {
 
         UpdateCategoryController w=loader.getController();
         w.setPlace(this.warehouse);
+        w.setCategory(category_table_w.getSelectionModel().getSelectedItem());
 
-//        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-//        window.setScene(wmain_scene);
-//        window.show();
         Stage manage=new Stage();
         manage.initModality(Modality.APPLICATION_MODAL);
         manage.setScene(wmain_scene);

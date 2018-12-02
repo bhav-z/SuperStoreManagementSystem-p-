@@ -11,7 +11,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="399.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory_subcategory.StoreSubController">
     <children>
-        <TableView fx:id="category_table_w" layoutX="71.0" layoutY="100.0" prefHeight="200.0" prefWidth="388.0">
+        <TableView fx:id="category_table_s" layoutX="71.0" layoutY="100.0" prefHeight="200.0" prefWidth="388.0">
             <columns>
                 <TableColumn fx:id="name" prefWidth="300.0" text="Subcategory" />
                 <TableColumn fx:id="id" prefWidth="85.0" text="ID" />

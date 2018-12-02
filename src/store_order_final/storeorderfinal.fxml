@@ -16,6 +16,6 @@
                     <TableColumn fx:id="delete" prefWidth="100.0" />
                 </columns>
             </TableView>
-            <Button layoutX="461.0" layoutY="276.0" mnemonicParsing="false" text="Send Order" />
+            <Button fx:id="send" onAction="#sendButtonClicked" layoutX="461.0" layoutY="276.0" mnemonicParsing="false" text="Send Order" />
         </children>
     </AnchorPane>

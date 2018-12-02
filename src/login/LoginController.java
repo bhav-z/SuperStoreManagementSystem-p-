@@ -14,6 +14,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import store_main.StoreMainController;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -107,6 +108,9 @@ public class LoginController {
         }
         else if(s.equals("Connected") && this.typeOfUser.equals("Store Admin")) {
             loader2.setLocation(getClass().getResource("/store_main/storemain.fxml"));
+
+            StoreMainController sc=loader2.getController();
+            sc.setStoreName("o");
             i++;
         }
 

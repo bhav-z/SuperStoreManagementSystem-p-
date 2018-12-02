@@ -3,11 +3,17 @@ package store_order_final;
 import cart.Cart;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import store_main.Store;
 
 import java.net.URL;
@@ -35,5 +41,12 @@ public class StoreOrderFinalController implements Initializable {
         delete.setCellValueFactory(new PropertyValueFactory<Cart, String>("del"));
 
         order_table.setItems(data);
+    }
+
+    public void sendButtonClicked(ActionEvent actionEvent) {
+        //code to add order data to backend
+
+        Stage window = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+        window.close();
     }
 }
