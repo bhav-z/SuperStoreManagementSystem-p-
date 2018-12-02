@@ -25,6 +25,8 @@ public class StoreMainController implements Initializable {
     @FXML private TableView category_table_s;
     @FXML private TableColumn name;
 
+    private String storename;
+
     private ObservableList<Category> data = FXCollections.observableArrayList();
 
 
@@ -36,18 +38,18 @@ public class StoreMainController implements Initializable {
         name.setCellValueFactory(new PropertyValueFactory<Category, String>("name"));
         id.setCellValueFactory(new PropertyValueFactory<Category, Integer>("id"));
 
-        category_table_s.setItems(data);
-        String sql="SELECT * from "+this.store.getName() +"_categories;"   ;
-        try {
-            Statement statement=connection.createStatement();
-            ResultSet resultSet=statement.executeQuery(sql);
-            while (resultSet.next()){
-                data.add(new Category(resultSet.getInt("id") , resultSet.getString("name")));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        category_table_s.setItems(data);
+//        category_table_s.setItems(data);
+//        String sql="SELECT * from "+this.store.getName() +"_categories;"   ;
+//        try {
+//            Statement statement=connection.createStatement();
+//            ResultSet resultSet=statement.executeQuery(sql);
+//            while (resultSet.next()){
+//                data.add(new Category(resultSet.getInt("id") , resultSet.getString("name")));
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        category_table_s.setItems(data);
     }
 
     public void searchButtonClicked(ActionEvent actionEvent) {
@@ -69,5 +71,9 @@ public class StoreMainController implements Initializable {
     }
 
     public void deleteButtonClicked(ActionEvent actionEvent) {
+    }
+
+    public void setStoreName(String s) {
+        this.storename=s;
     }
 }

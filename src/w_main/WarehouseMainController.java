@@ -141,13 +141,11 @@ public class WarehouseMainController implements Initializable {
         Parent wmain_page = loader.load();
         Scene wmain_scene = new Scene(wmain_page);
 
-<<<<<<< HEAD
         StoreSubController w=loader.getController();
         w.setPlace(this.warehouse);
         w.setCategory(category_table_w.getSelectionModel().getSelectedItem());
 
-=======
->>>>>>> 6c539d58b3f0da441653b8dcba981ee584cbf93d
+
 //        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
 //        window.setScene(wmain_scene);
 //        window.show();
