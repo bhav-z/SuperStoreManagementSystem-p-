@@ -1,5 +1,6 @@
 package inventory_subcategory;
 
+import MainClasses.Warehouse;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -22,6 +23,8 @@ public class StoreSubController implements Initializable {
     @FXML private TableColumn go;
     private ObservableList<Store> data= FXCollections.observableArrayList(new Store("Smart Phone"));
 
+    private Warehouse warehouse;
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb){
@@ -31,5 +34,9 @@ public class StoreSubController implements Initializable {
         go.setCellValueFactory(new PropertyValueFactory<Store, String>("view"));
 
         category_table.setItems(data);
+    }
+
+    public void setWarehouse(Warehouse warehouse) {
+        this.warehouse=warehouse;
     }
 }

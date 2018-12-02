@@ -1,8 +1,8 @@
-package add_category;
+package update_category;
 
 import MainClasses.Warehouse;
 
-public class AddCategoryController {
+public class UpdateCategoryController {
 
     private Warehouse warehouse;
 

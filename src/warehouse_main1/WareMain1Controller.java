@@ -59,7 +59,9 @@ public class WareMain1Controller implements Initializable {
         Scene wmain_scene = new Scene(wmain_page);
 
         WarehouseMainController w=loader.getController();
-        w.setWarehouse(comboString.getSelectionModel().toString());
+        Warehouse w2=new Warehouse();
+        w2.setName(comboString.getSelectionModel().toString());
+        w.setWarehouse(w2);
 
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         window.setScene(wmain_scene);

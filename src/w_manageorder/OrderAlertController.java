@@ -1,5 +1,6 @@
 package w_manageorder;
 
+import MainClasses.Warehouse;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -29,6 +30,8 @@ public class OrderAlertController implements Initializable {
     private ObservableList<Order> data= FXCollections.observableArrayList(new Order("Bandra", "123", "iPhone X", "10",
             "3", "400", "yes"));
 
+    private Warehouse warehouse;
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb){
@@ -42,8 +45,10 @@ public class OrderAlertController implements Initializable {
         fulfill.setCellValueFactory(new PropertyValueFactory<Order, String>("fulfill"));
         forward.setCellValueFactory(new PropertyValueFactory<Order, String>("forward"));
 
-
-
         order_table.setItems(data);
+    }
+
+    public void setWarehouse(Warehouse w){
+        this.warehouse=w;
     }
 }
