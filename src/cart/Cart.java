@@ -5,10 +5,10 @@ import javafx.scene.control.Button;
 
 public class Cart {
 
-    SimpleStringProperty name;
-    SimpleStringProperty quantity;
-    SimpleStringProperty cost;
-    Button del;
+    private String name;
+    private int quantity;
+    private int cost;
+    private Button del;
     SimpleStringProperty date;
     SimpleStringProperty ID;
 
@@ -36,49 +36,39 @@ public class Cart {
         this.ID.set(ID);
     }
 
-    public  Cart(String n, String q, String c){
-        this.name=new SimpleStringProperty(n);
-        this.quantity=new SimpleStringProperty(q);
-        this.cost=new SimpleStringProperty(c);
+    public  Cart(String n, int q, int c){
+        this.name=n;
+        this.quantity=q;
+        this.cost= c;
         this.del=new Button("Remove");
         this.date=new SimpleStringProperty("7/12/18");
         this.ID=new SimpleStringProperty("10");
     }
 
     public String getName() {
-        return name.get();
-    }
-
-    public SimpleStringProperty nameProperty() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name.set(name);
+    public void setName(String n) {
+        name=n;
     }
 
-    public String getQuantity() {
-        return quantity.get();
-    }
-
-    public SimpleStringProperty quantityProperty() {
+    public int getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(String quantity) {
-        this.quantity.set(quantity);
+
+    public void setQuantity(int q) {
+        quantity=q;
     }
 
-    public String getCost() {
-        return cost.get();
-    }
-
-    public SimpleStringProperty costProperty() {
+    public int getCost() {
         return cost;
     }
 
-    public void setCost(String cost) {
-        this.cost.set(cost);
+
+    public void setCost(int c) {
+        cost=c;
     }
 
     public Button getDel() {

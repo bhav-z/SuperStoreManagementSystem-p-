@@ -28,7 +28,7 @@ public class StoreOrderFinalController implements Initializable {
     @FXML private TableColumn quantity;
     @FXML private TableColumn date;
     @FXML private TableColumn delete;
-    private ObservableList<Cart> data= FXCollections.observableArrayList(new Cart("iPhone X", "45", "80,000"));
+    private ObservableList<Cart> data= FXCollections.observableArrayList();
 
 
     @Override

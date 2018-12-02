@@ -50,6 +50,20 @@ public class StoreMainController implements Initializable {
         name.setCellValueFactory(new PropertyValueFactory<Category, String>("name"));
         id.setCellValueFactory(new PropertyValueFactory<Category, Integer>("id"));
 
+
+        category_table_s.setItems(data);
+        String sql="SELECT * from store_categories1;"   ;
+        try {
+            Statement statement=connection.createStatement();
+            ResultSet resultSet=statement.executeQuery(sql);
+            while (resultSet.next()){
+                data.add(new Category(resultSet.getInt("id") , resultSet.getString("name")));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        category_table_s.setItems(data);
+
 //        category_table_s.setItems(data);
 //        String sql="SELECT * from "+this.store.getName() +"_categories;"   ;
 //        try {
