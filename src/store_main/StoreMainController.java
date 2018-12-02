@@ -37,7 +37,7 @@ public class StoreMainController implements Initializable {
         id.setCellValueFactory(new PropertyValueFactory<Category, Integer>("id"));
 
         category_table_s.setItems(data);
-        String sql="SELECT * from "+this.store.getName() +"_categories;"   ;
+        String sql="SELECT * from store_categories1;"   ;
         try {
             Statement statement=connection.createStatement();
             ResultSet resultSet=statement.executeQuery(sql);
