@@ -2,9 +2,6 @@ package warehouse_main1;
 
 import ConnectionUtil.ConnectionU;
 import MainClasses.Warehouse;
-import com.mysql.jdbc.Connection;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,20 +9,22 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
-import store_main.Store;
 import w_main.WarehouseMainController;
 
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
 public class WareMain1Controller implements Initializable {
-
+    @FXML
+    public Button proceed1;
     @FXML
     ComboBox comboString;
     ConnectionU connectionClass = new ConnectionU();
@@ -35,7 +34,6 @@ public class WareMain1Controller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
         try {
             Statement statement=connection.createStatement();
             //String tableName="warehouse_list";
@@ -48,20 +46,22 @@ public class WareMain1Controller implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
     }
 
-    public void proceed1ButtonClicked(ActionEvent actionEvent) throws Exception{
+    public void proceed1ButtonClicked(ActionEvent actionEvent) throws IOException, InvocationTargetException {
         FXMLLoader loader=new FXMLLoader();
-        loader.setLocation(getClass().getResource("/w_main/wmain.fxml"));
-        Parent wmain_page = loader.load();
-        Scene wmain_scene = new Scene(wmain_page);
-
+        loader.setLocation(getClass().getResource("/w_main/warehouse_main.fxml"));
+        //System.out.println(loader.getLocation());
         WarehouseMainController w=loader.getController();
-        Warehouse w2=new Warehouse();
-        w2.setName(comboString.getValue().toString());
-        w.setWarehouse(w2);
+        //Warehouse w2=new Warehouse();
+        //w2.setName(comboString.getValue().toString());
+        //System.out.println(w2.getName()+"LOOOL");
+        //w.setWarehouse(w2);
+        //System.out.println(w2.getName()+"LMAOO");
+        //Parent wmain_page = loader.load();
+        Scene wmain_scene = new Scene((Parent)loader.load());
+
+
 
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         window.setScene(wmain_scene);

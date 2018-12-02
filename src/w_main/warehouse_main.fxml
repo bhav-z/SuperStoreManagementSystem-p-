@@ -9,31 +9,37 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane prefHeight="422.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="w_main.WarehouseMainController">
-
+<AnchorPane prefHeight="422.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/8.0.172-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="w_main.WarehouseMainController">
     <TableView fx:id="category_table_w" layoutX="71.0" layoutY="100.0" prefHeight="200.0" prefWidth="388.0">
         <columns>
-            <TableColumn fx:id="name" prefWidth="300.0" text="Category Name" />
-            <TableColumn fx:id="id" prefWidth="85.0" text="ID" />
+            <TableColumn fx:id="name" prefWidth="300.0" text="Category Name"/>
+            <TableColumn fx:id="id" prefWidth="85.0" text="ID"/>
         </columns>
     </TableView>
-    <TextField layoutX="80.0" layoutY="43.0" prefHeight="27.0" prefWidth="421.0" />
-    <Button fx:id="search" layoutX="524.0" layoutY="43.0" mnemonicParsing="false" onAction="#searchButtonClicked" prefHeight="27.0" prefWidth="83.0" text="Search" />
-    <Button fx:id="add_category_button" layoutX="495.0" layoutY="329.0" mnemonicParsing="false" onAction="#addCategoryButtonClicked" text="Add Category" />
-    <Button fx:id="manage_orders_button" layoutX="164.0" layoutY="329.0" mnemonicParsing="false" onAction="#manageOrdersButtonClicked" text="Manage Orders" />
-    <Button fx:id="update_d_button" layoutX="71.0" layoutY="329.0" mnemonicParsing="false" onAction="#updateDButtonClicked" text="Update D" />
-    <MenuBar prefHeight="29.0" prefWidth="679.0">
-        <menus>
-            <Menu mnemonicParsing="false" text="Logout">
-                <graphic>
-                    <HBox prefHeight="29.0" prefWidth="582.0" />
-                </graphic>
-            </Menu>
-        </menus>
-    </MenuBar>
-    <Button fx:id="view_button" layoutX="508.0" layoutY="138.0" mnemonicParsing="false" onAction="#viewButtonClicked" prefHeight="27.0" prefWidth="77.0" text="View" />
-    <Button fx:id="update_button" layoutX="508.0" layoutY="185.0" mnemonicParsing="false" onAction="#updateButtonClicked" prefHeight="27.0" prefWidth="77.0" text="Update" />
-    <Button fx:id="delete_button" layoutX="508.0" layoutY="231.0" mnemonicParsing="false" onAction="#deleteButtonClicked" prefHeight="27.0" prefWidth="77.0" text="Delete" />
-    <Button fx:id="back_button" layoutX="73.0" layoutY="374.0" mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
 
+    <TextField layoutX="80.0" layoutY="43.0" prefHeight="27.0" prefWidth="421.0"/>
+    <Button fx:id="search" layoutX="524.0" layoutY="43.0" mnemonicParsing="false" onAction="#searchButtonClicked"
+            prefHeight="27.0" prefWidth="83.0" text="Search"/>
+    <Button fx:id="add_category_button" layoutX="495.0" layoutY="329.0" mnemonicParsing="false"
+            onAction="#addCategoryButtonClicked" text="Add Category"/>
+    <Button fx:id="manage_orders_button" layoutX="164.0" layoutY="329.0" mnemonicParsing="false"
+            onAction="#manageOrdersButtonClicked" text="Manage Orders"/>
+    <Button fx:id="update_d_button" layoutX="71.0" layoutY="329.0" mnemonicParsing="false"
+            onAction="#updateDButtonClicked" text="Update D"/>
+    <MenuBar prefHeight="29.0" prefWidth="679.0">
+        <Menu mnemonicParsing="false" text="Logout">
+            <graphic>
+                <HBox prefHeight="29.0" prefWidth="582.0"/>
+            </graphic>
+        </Menu>
+    </MenuBar>
+    <Button fx:id="view_button" layoutX="508.0" layoutY="138.0" mnemonicParsing="false" onAction="#viewButtonClicked"
+            prefHeight="27.0" prefWidth="77.0" text="View"/>
+    <Button fx:id="update_button" layoutX="508.0" layoutY="185.0" mnemonicParsing="false"
+            onAction="#updateButtonClicked" prefHeight="27.0" prefWidth="77.0" text="Update"/>
+    <Button fx:id="delete_button" layoutX="508.0" layoutY="231.0" mnemonicParsing="false"
+            onAction="#deleteButtonClicked" prefHeight="27.0" prefWidth="77.0" text="Delete"/>
+    <Button fx:id="back_button" layoutX="73.0" layoutY="374.0" mnemonicParsing="false" onAction="#backButtonClicked"
+            text="Back"/>
 </AnchorPane>
