@@ -2,13 +2,20 @@ package su_users;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import w_manageorder.Order;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -33,6 +40,16 @@ public class UsersController implements Initializable {
         delete.setCellValueFactory(new PropertyValueFactory<Order, String>("delete"));
 
         users_table.setItems(data2);
+    }
+
+    public void backButtonClicked(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getResource("/su_main/su_main.fxml"));
+        Parent wmain_page = loader.load();
+        Scene wmain_scene = new Scene(wmain_page);
+        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        window.setScene(wmain_scene);
+        window.show();
     }
 
 }

@@ -1,41 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
-
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="user_main.UserMainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user_main.UserMainController">
     <children>
         <TextField layoutX="54.0" layoutY="53.0" prefHeight="27.0" prefWidth="404.0" />
         <Button layoutX="473.0" layoutY="53.0" mnemonicParsing="false" text="Search" />
         <MenuBar prefHeight="29.0" prefWidth="600.0">
             <menus>
-                <Menu mnemonicParsing="false" text="Cart" />
+                <Menu fx:id="cart" onAction="#goToCart" mnemonicParsing="false" text="Cart" />
             </menus>
         </MenuBar>
-        <TableView fx:id="category_table" layoutX="54.0" layoutY="160.0" prefHeight="200.0" prefWidth="485.0">
+        <TableView fx:id="category_table" layoutX="54.0" layoutY="160.0" prefHeight="159.0" prefWidth="485.0">
             <columns>
-                <TableColumn fx:id="name" prefWidth="300.0" text="Category Name" />
-                <TableColumn fx:id="explore" prefWidth="190.0" />
+                <TableColumn fx:id="name" prefWidth="484.0" text="Category Name" />
             </columns>
         </TableView>
-        <Label layoutX="276.0" layoutY="108.0" prefHeight="19.0" prefWidth="66.0" text="Filter by">
+        <Label layoutX="276.0" layoutY="108.0" prefHeight="19.0" prefWidth="66.0" text="Sort by">
             <font>
                 <Font size="15.0" />
             </font>
         </Label>
-        <ComboBox layoutX="380.0" layoutY="104.0" prefHeight="27.0" prefWidth="143.0" promptText="Name" fx:id="filterCombo"/>
+        <ComboBox fx:id="sortCombo" layoutX="380.0" layoutY="104.0" prefHeight="27.0" prefWidth="143.0" promptText="Name" />
+      <Button fx:id="visit" onAction="#exploreButtonClicked" layoutX="473.0" layoutY="348.0" mnemonicParsing="false" text="Explore" />
     </children>
 </AnchorPane>
-

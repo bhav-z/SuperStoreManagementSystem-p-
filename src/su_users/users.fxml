@@ -28,6 +28,6 @@
         </MenuBar>
         <Button layoutX="569.0" layoutY="52.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="96.0" text="Search" />
         <Button layoutX="544.0" layoutY="323.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="116.0" text="Add New User" />
-        <Button layoutX="69.0" layoutY="326.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="116.0" text="Back" />
+        <Button onAction="#backButtonClicked" layoutX="69.0" layoutY="326.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="116.0" text="Back" />
     </children>
 </AnchorPane>

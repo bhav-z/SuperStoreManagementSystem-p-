@@ -38,15 +38,14 @@ public class AddWarehouseController {
         try {
             Statement statement=connection.createStatement();
             String warehousename1=name.getText().trim();
-            String Dinput=dinput.getText().trim();
+//            String Dinput=dinput.getText().trim();
             //THERES NO CONNECTION BETWEEN THE VALUES IN WAREHOUSE_LIST AND ITS SUBSEQUENT 3 TABLES
             String sql0="INSERT INTO warehouse_list" +
                     " (name,id,warehouseD,if_order) " +
                     "VALUES (" +
                     "'"+warehousename1+"'," +
                     "'"+warehousename1.hashCode()+"'," +
-                    "'"+Dinput+"'," +
-                    "'"+0+"'"+");";
+                    "'"+12+"',"+0+");";
             statement.executeUpdate(sql0);
             //https://stackoverflow.com/questions/6260688/how-do-i-use-cascade-delete-with-sql-server
             String sql1 =

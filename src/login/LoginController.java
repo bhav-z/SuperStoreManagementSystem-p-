@@ -103,7 +103,7 @@ public class LoginController {
         FXMLLoader loader2=new FXMLLoader();
         int i=0;
 
-        if(s.equals("Not Connected") || s.equals("LoginError")) {
+        if(s.equals("Not Connected") || s.equals("Enter Password")) {
             Stage errorwindow=new Stage();
             errorwindow.initModality(Modality.APPLICATION_MODAL);
             FXMLLoader loader3=new FXMLLoader();
@@ -127,8 +127,8 @@ public class LoginController {
         else if(s.equals("Connected") && this.typeOfUser.equals("Store Admin")) {
             loader2.setLocation(getClass().getResource("/store_main/storemain.fxml"));
 
-            StoreMainController sc=loader2.getController();
-            sc.setStoreName("o");
+//            StoreMainController sc=loader2.getController();
+//            sc.setStoreName("o");
             i++;
         }
 

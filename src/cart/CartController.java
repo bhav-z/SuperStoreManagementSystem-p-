@@ -42,9 +42,9 @@ public class CartController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb){
         product.setCellValueFactory(new PropertyValueFactory<Cart, String>("name"));
-        quantity.setCellValueFactory(new PropertyValueFactory<Cart, String>("quantity"));
-        cost.setCellValueFactory(new PropertyValueFactory<Cart, String>("cost"));
-        delete.setCellValueFactory(new PropertyValueFactory<Cart, String>("del"));
+        quantity.setCellValueFactory(new PropertyValueFactory<Cart, Integer>("quantity"));
+        cost.setCellValueFactory(new PropertyValueFactory<Cart, Integer>("cost"));
+        //delete.setCellValueFactory(new PropertyValueFactory<Cart, String>("del"));
 
         ConnectionU connectionClass = new ConnectionU();
         Connection connection=connectionClass.getConnection();
@@ -52,14 +52,15 @@ public class CartController implements Initializable {
 //        name.setCellValueFactory(new PropertyValueFactory<Category, String>("name"));
 //        id.setCellValueFactory(new PropertyValueFactory<Category, Integer>("id"));
 
-        String sql="SELECT * from cart;"   ;
         int costt=0;
         try {
+            String sql="SELECT * from cart;";
             Statement statement=connection.createStatement();
             ResultSet resultSet=statement.executeQuery(sql);
             while (resultSet.next()){
-                data.add(
-                        new Cart(resultSet.getString("name") , resultSet.getInt("quantity") , resultSet.getInt("cost")));
+
+                //System.out.println(resultSet.getString("name"));
+                data.add(new Cart(resultSet.getString("name") , resultSet.getInt("quantity") , resultSet.getInt("cost")));
                 costt+=resultSet.getInt("quantity")*resultSet.getInt("cost");
             }
         } catch (SQLException e) {
