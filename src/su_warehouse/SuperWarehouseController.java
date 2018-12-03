@@ -12,8 +12,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -30,9 +32,11 @@ import java.util.ResourceBundle;
 
 public class SuperWarehouseController implements Initializable {
 
+    public Button searchBtn;
+    public TextField searchBar;
     @FXML private TableView ware_table;
-    @FXML private TableColumn ware_name;
-    @FXML private TableColumn ware_id;
+    @FXML private TableColumn name;
+    @FXML private TableColumn id;
     //@FXML private TableColumn quantity;
     //@FXML private TableColumn date;
     //@FXML private TableColumn feasible;
@@ -51,20 +55,18 @@ public class SuperWarehouseController implements Initializable {
     public void initialize(URL url, ResourceBundle rb){
 //        storenamee.setCellValueFactory(new PropertyValueFactory<Order, String>("sname"));
 //        storeidd.setCellValueFactory(new PropertyValueFactory<Order, String>("sid"));
-//        //quantity.setCellValueFactory(new PropertyValueFactory<Order, String>("quantity"));
-//        //date.setCellValueFactory(new PropertyValueFactory<Order, String>("date"));
-//        //itemid.setCellValueFactory(new PropertyValueFactory<Order, String>("iid"));
-//        //itemname.setCellValueFactory(new PropertyValueFactory<Order, String>("iname"));
-//        //feasible.setCellValueFactory(new PropertyValueFactory<Order, String>("feasible"));
+//        quantity.setCellValueFactory(new PropertyValueFactory<Order, String>("quantity"));
+//        date.setCellValueFactory(new PropertyValueFactory<Order, String>("date"));
+//        itemid.setCellValueFactory(new PropertyValueFactory<Order, String>("iid"));
+//        itemname.setCellValueFactory(new PropertyValueFactory<Order, String>("iname"));
+//        feasible.setCellValueFactory(new PropertyValueFactory<Order, String>("feasible"));
 //        deletee.setCellValueFactory(new PropertyValueFactory<Order, String>("delete"));
 //        linkk.setCellValueFactory(new PropertyValueFactory<Order, String>("link"));
 //        vieww.setCellValueFactory(new PropertyValueFactory<Order, String>("view"));
-//
-//
 //        ware_table.setItems(data);
 
-        ware_name.setCellValueFactory(new PropertyValueFactory<Warehouse, String>("name"));
-        ware_id.setCellValueFactory(new PropertyValueFactory<Warehouse, Integer>("id"));
+        name.setCellValueFactory(new PropertyValueFactory<Warehouse, String>("name"));
+        id.setCellValueFactory(new PropertyValueFactory<Warehouse, Integer>("ID"));
 
         ConnectionU connectionClass = new ConnectionU();
         Connection connection=connectionClass.getConnection();
@@ -81,6 +83,7 @@ public class SuperWarehouseController implements Initializable {
             e.printStackTrace();
         }
         ware_table.setItems(data);
+        ware_table.refresh();
 
 
     }
@@ -123,6 +126,29 @@ public class SuperWarehouseController implements Initializable {
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         window.setScene(wmain_scene);
         window.show();
+    }
+
+    public void searchFnc(ActionEvent actionEvent) {
+        ware_table.getItems().clear();
+        name.setCellValueFactory(new PropertyValueFactory<Warehouse, String>("name"));
+        id.setCellValueFactory(new PropertyValueFactory<Warehouse, Integer>("ID"));
+
+        ConnectionU connectionClass = new ConnectionU();
+        Connection connection=connectionClass.getConnection();
+        try {
+            String sql= "SELECT name,id from warehouse_list WHERE name like '%"+searchBar.getText().trim()+"%';";
+
+            Statement statement=connection.createStatement();
+            ResultSet resultSet=statement.executeQuery(sql);
+
+            while (resultSet.next()){
+                data.add(new Warehouse(resultSet.getString("name") , resultSet.getInt("id")));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        ware_table.setItems(data);
+
     }
 }
 

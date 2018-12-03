@@ -27,6 +27,7 @@ import update_d.UpdateD;
 import update_d.UpdateDController;
 import w_manageorder.OrderAlert;
 import w_manageorder.OrderAlertController;
+import warehouse_main1.WareMain1Controller;
 
 import java.io.IOException;
 import java.net.URL;
@@ -52,7 +53,7 @@ public class WarehouseMainController implements Initializable {
     private ObservableList<Category> data = FXCollections.observableArrayList();
     @FXML private TableView<Category> category_table_w;
 
-    private Warehouse warehouse;
+    public Warehouse warehouse;
 
     /**
      * method to populate the category table
@@ -65,11 +66,11 @@ public class WarehouseMainController implements Initializable {
         //System.out.println(this.warehouse.getName());
         ConnectionU connectionClass = new ConnectionU();
         Connection connection=connectionClass.getConnection();
-
+        System.out.println(this.warehouse.getName());
         name.setCellValueFactory(new PropertyValueFactory<Category, String>("name"));
         id.setCellValueFactory(new PropertyValueFactory<Category, Integer>("id"));
-
         String sql="SELECT * from "+this.warehouse.getName() +"_categories;"   ;
+        System.out.println(sql);
         try {
             Statement statement=connection.createStatement();
             ResultSet resultSet=statement.executeQuery(sql);
@@ -82,16 +83,11 @@ public class WarehouseMainController implements Initializable {
         category_table_w.setItems(data);
     }
 
-    /**
-     * sets current warehouse
-     * @param w
-     */
-
-    public void setWarehouse(Warehouse w){
-        this.warehouse=w;
+    public void setWarehouse(Warehouse x){
+        //this.warehouse=w;
         //check with database and get warehouse id
         int id=0;
-        this.warehouse.setID(id);
+        this.warehouse=x;
     }
 
     public void searchButtonClicked(ActionEvent actionEvent) {

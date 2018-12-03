@@ -21,8 +21,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
+import java.util.logging.Logger;
 
 public class WareMain1Controller implements Initializable {
+    public static Warehouse temp;
     @FXML
     public Button proceed1;
     @FXML
@@ -62,20 +64,24 @@ public class WareMain1Controller implements Initializable {
     public void proceed1ButtonClicked(ActionEvent actionEvent) throws IOException, InvocationTargetException {
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("/w_main/warehouse_main.fxml"));
-        //System.out.println(loader.getLocation());
-        WarehouseMainController w=loader.getController();
-        //Warehouse w2=new Warehouse();
-        //w2.setName(comboString.getValue().toString());
-        //System.out.println(w2.getName()+"LOOOL");
-        //w.setWarehouse(w2);
-        //System.out.println(w2.getName()+"LMAOO");
-        //Parent wmain_page = loader.load();
-        Scene wmain_scene = new Scene((Parent)loader.load());
+        try {
+            Parent root = (Parent)loader.load();
+        }catch (IOException e){
+            System.out.println("OOPS");
+        }
+        Warehouse w2=new Warehouse(comboString.getValue().toString(),2 );
+        temp=w2;
+        System.out.println(w2.getName()+"LOOOL");
+        System.out.println(w2.getName()+"LMAOO");
+        WarehouseMainController ok = loader.getController();
+        ok.setWarehouse(w2);
+        Parent p = loader.getRoot();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(p));
+        stage.show(); //AndWait();
+//        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+//        window.setScene(wmain_scene);
+//        window.show();
 
-
-
-        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        window.setScene(wmain_scene);
-        window.show();
     }
 }

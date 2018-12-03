@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Initial extends Application {
@@ -14,8 +15,7 @@ public class Initial extends Application {
         primaryStage.setTitle("Initial");
         primaryStage.setScene(new Scene(root, 446, 242));
         primaryStage.show();
-
-
+        primaryStage.getIcons().add(new Image("file:C:\\Users\\A\\Pictures\\stego.jpg"));
     }
 
 

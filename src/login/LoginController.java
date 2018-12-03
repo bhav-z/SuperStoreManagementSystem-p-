@@ -126,9 +126,6 @@ public class LoginController {
         }
         else if(s.equals("Connected") && this.typeOfUser.equals("Store Admin")) {
             loader2.setLocation(getClass().getResource("/store_main/storemain.fxml"));
-
-//            StoreMainController sc=loader2.getController();
-//            sc.setStoreName("o");
             i++;
         }
 

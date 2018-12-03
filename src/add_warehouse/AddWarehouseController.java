@@ -41,11 +41,12 @@ public class AddWarehouseController {
 //            String Dinput=dinput.getText().trim();
             //THERES NO CONNECTION BETWEEN THE VALUES IN WAREHOUSE_LIST AND ITS SUBSEQUENT 3 TABLES
             String sql0="INSERT INTO warehouse_list" +
-                    " (name,id,warehouseD,if_order) " +
+                    " (name,id,D,if_order) " +
                     "VALUES (" +
                     "'"+warehousename1+"'," +
                     "'"+warehousename1.hashCode()+"'," +
-                    "'"+12+"',"+0+");";
+                    "'"+12+"',"+
+                    0 +");";
             statement.executeUpdate(sql0);
             //https://stackoverflow.com/questions/6260688/how-do-i-use-cascade-delete-with-sql-server
             String sql1 =
@@ -63,19 +64,8 @@ public class AddWarehouseController {
                             "FOREIGN KEY (category_name)" +
                             "REFERENCES "+ warehousename1 +"_categories (category_name)" +
                             "ON DELETE CASCADE);";
-//            String sql3 =
-//                    "CREATE TABLE "+ warehousename1 +"_itemss ( " +
-//                            " item_id INT NOT NULL ," +
-//                            " subcategory_name VARCHAR(100) NOT NULL , "+
-//                            " item_name VARCHAR(100) NOT NULL , "+
-//                            " CONSTRAINT fk_inv_subcategory_id " +
-//                            "FOREIGN KEY (subcategory_name)" +
-//                            "REFERENCES "+ warehousename1 +"_subcategories (subcategory_name)" +
-//                            "ON DELETE CASCADE);";
-
             statement.addBatch(sql1);
             statement.addBatch(sql2);
-//            statement.addBatch(sql3);
             statement.executeBatch();
 
             this.createProductsTable();
@@ -96,18 +86,20 @@ public class AddWarehouseController {
         try {
             Statement statement=connection.createStatement();
             String warehousename1=name.getText().trim();
-
-            String sql3 =
-                    "CREATE TABLE "+ warehousename1 +"_itemss ( " +
-                            " item_id INT NOT NULL ," +
-                            " subcategory_name VARCHAR(100) NOT NULL , "+
-                            " item_name VARCHAR(100) NOT NULL , "+
+            String test=
+                    "CREATE TABLE "+ warehousename1 +"_itemss  ( " +
+                            " `item_name` INT(10) NOT NULL , " +
+                            " `item_id` INT(10) NOT NULL , " +
+                            " `subcategory_name` VARCHAR(100) NOT NULL , " +
+                            " `units` INT(10) NOT NULL , " +
+                            " `carrying_cost` INT(10) NOT NULL , " +
+                            " `demand` INT(10) NOT NULL , " +
+                            " `description` VARCHAR(2000) NOT NULL , "+
                             " CONSTRAINT fk_inv_"+warehousename1+"_subcategory_id " +
-                            "FOREIGN KEY (subcategory_name)" +
-                            "REFERENCES "+ warehousename1 +"_subcategories (subcategory_name)" +
-                            "ON DELETE CASCADE);";
-
-            statement.addBatch(sql3);
+                            " FOREIGN KEY (subcategory_name)" +
+                            " REFERENCES "+ warehousename1 +"_subcategories (subcategory_name)" +
+                            " ON DELETE CASCADE);";
+            statement.addBatch(test);
             statement.executeBatch();
 
         } catch (SQLException e) {
