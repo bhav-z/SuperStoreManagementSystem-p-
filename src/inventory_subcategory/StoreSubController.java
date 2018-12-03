@@ -37,26 +37,29 @@ import java.util.ResourceBundle;
  */
 public class StoreSubController implements Initializable {
 
+    public TableView subcategory_table_s;
     @FXML
     private TableView category_table_s;
     @FXML private TableColumn name;
     @FXML private TableColumn id;
-    private ObservableList<Store> dataS= FXCollections.observableArrayList(new Store("Smart Phone"));
-    private ObservableList<Store> dataW= FXCollections.observableArrayList(new Store("Smart Phone"));
+    private ObservableList<Subcategory>data=FXCollections.observableArrayList();   //= FXCollections.observableArrayList(new Store("Smart Phone"));
+    //private ObservableList<Place> dataW= FXCollections.observableArrayList(new Warehouse("Smart Phone",6));
 
     private Place place;
     private String categoryNAME;
     private Category category;
     private String WAREHOUSE_NAME;
 
-    public void setTableText(String name){
-        /*this.WAREHOUSE_NAME=name;
+    public void setTableText(String name1){
+        this.WAREHOUSE_NAME=name1;
+        ConnectionU connectionClass = new ConnectionU();
+        Connection connection=connectionClass.getConnection();
         //System.out.println(this.warehouse.getName());
-        name.setCellValueFactory(new PropertyValueFactory<St, String>("name"));
-        id.setCellValueFactory(new PropertyValueFactory<Category, Integer>("id"));
+        name.setCellValueFactory(new PropertyValueFactory<Subcategory, String>("name"));
+        id.setCellValueFactory(new PropertyValueFactory<Subcategory, Integer>("id"));
         String sql;
         try {
-            sql="SELECT * from "+warehouseName +"_categories;"   ;
+            sql="SELECT * from "+WAREHOUSE_NAME +"_subcategories;"   ;
         }catch (Exception e){
             System.out.println("NOOOOOOOO");
             sql="SELECT * from "+"Marine" +"_categories;"   ;
@@ -66,19 +69,19 @@ public class StoreSubController implements Initializable {
             Statement statement=connection.createStatement();
             ResultSet resultSet=statement.executeQuery(sql);
             while (resultSet.next()){
-                data.add(new Category(resultSet.getInt("category_id"),resultSet.getString("category_name") ));
+                data.add(new Subcategory(resultSet.getInt("subcategory_id"),resultSet.getString("subcategory_name") ));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        category_table_w.setItems(data);*/
+        subcategory_table_s.setItems(data);
     }
     @Override
     public void initialize(URL url, ResourceBundle rb){
         System.out.println(this.getClass());
-        name.setCellValueFactory(new PropertyValueFactory<Store, String>("category_name"));
-
-        category_table_s.setItems(dataW);
+//        name.setCellValueFactory(new PropertyValueFactory<Store, String>("category_name"));
+//
+//        category_table_s.setItems(data);
     }
 
     public void setPlace(Place warehouse) {

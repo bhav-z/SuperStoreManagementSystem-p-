@@ -1,9 +1,10 @@
 package store_main;
 
+import MainClasses.Place;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.control.Button;
 
-public class Store {
+public class Store extends Place {
 
     private SimpleStringProperty category_name;
     private Button update;
@@ -75,5 +76,25 @@ public class Store {
 
     public void setDelete(Button delete) {
         this.delete = delete;
+    }
+
+    @Override
+    public void setName(String p) {
+
+    }
+
+    @Override
+    public void setID(int i) {
+
+    }
+
+    @Override
+    public String getName() {
+        return null;
+    }
+
+    @Override
+    public int getID() {
+        return 0;
     }
 }

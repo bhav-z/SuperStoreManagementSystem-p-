@@ -202,7 +202,7 @@ public class WarehouseMainController implements Initializable {
     public void viewButtonClicked(ActionEvent actionEvent) throws IOException{
 
         FXMLLoader loader=new FXMLLoader();
-        loader.setLocation(getClass().getResource("/inventory_subcategory/StoreSub.fxml"));
+        loader.setLocation(getClass().getResource("/inventory_subcategory/storesub.fxml"));
         try {
             loader.load();
         }catch (IOException e){

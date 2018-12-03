@@ -9,9 +9,9 @@ public class Subcategory {
     private int id;
 
 
-    public Subcategory(String name) {
+    public Subcategory(int id,String name) {
         this.name = name;
-        this.items=new ArrayList<InventoriedItem>();
+        this.id=id;
     }
 
     public int getId() {

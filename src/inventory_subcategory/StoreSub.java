@@ -17,7 +17,7 @@ public class StoreSub extends Application {
 
         Parent root = FXMLLoader.load(getClass().getResource("storesub.fxml"));
         primaryStage.setTitle("Subcategory");
-        primaryStage.setScene(new Scene(root, 715, 400));
+        primaryStage.setScene(new Scene(root, 815, 500));
         primaryStage.show();
 
     }
