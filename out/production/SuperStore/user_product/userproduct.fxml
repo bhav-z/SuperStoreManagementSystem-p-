@@ -23,7 +23,7 @@
             <TextArea editable="false" layoutX="57.0" layoutY="70.0" prefHeight="98.0" prefWidth="200.0" text="DESCRIPTION&#10;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor." wrapText="true" />
             <ComboBox fx:id="quantity" layoutX="321.0" layoutY="141.0" prefHeight="27.0" prefWidth="58.0" promptText="1" />
             <Label layoutX="317.0" layoutY="119.0" text="QUANTITY" />
-            <Button layoutX="177.0" layoutY="190.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="117.0" text="Add To Cart" />
+            <Button onAction="#viewButtonClicked" layoutX="177.0" layoutY="190.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="117.0" text="Add To Cart" />
 
     </children>
 </AnchorPane>
