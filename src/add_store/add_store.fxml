@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="add_store.addStoreController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <children>
+        <Button fx:id="add" onAction="#addButtonClicked" layoutX="316.0" layoutY="176.0" mnemonicParsing="false" text="Add" />
+        <Label layoutX="73.0" layoutY="84.0" prefHeight="17.0" prefWidth="50.0" text="Name" />
+        <TextField fx:id="name" layoutX="189.0" layoutY="79.0" />
+    </children>
+
+</AnchorPane>

@@ -18,6 +18,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -43,6 +44,7 @@ public class WarehouseMainController implements Initializable {
     @FXML public Button update_button;
     @FXML public Button delete_button;
     @FXML public Button back_button;
+    public TextField searchbar;
     @FXML private Button search;
     @FXML private Button add_category_button;
     @FXML private Button manage_orders_button;
@@ -53,7 +55,7 @@ public class WarehouseMainController implements Initializable {
     private ObservableList<Category> data = FXCollections.observableArrayList();
     @FXML private TableView<Category> category_table_w;
 
-    public Warehouse warehouse;
+    public String WAREHOUSE_NAME;
 
     /**
      * method to populate the category table
@@ -63,19 +65,29 @@ public class WarehouseMainController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb){
-        //System.out.println(this.warehouse.getName());
+        System.out.println(this.getClass());
+
+    }
+    public void setTableText(String warehouseName){
+        this.WAREHOUSE_NAME=warehouseName;
         ConnectionU connectionClass = new ConnectionU();
         Connection connection=connectionClass.getConnection();
-        System.out.println(this.warehouse.getName());
+        //System.out.println(this.warehouse.getName());
         name.setCellValueFactory(new PropertyValueFactory<Category, String>("name"));
         id.setCellValueFactory(new PropertyValueFactory<Category, Integer>("id"));
-        String sql="SELECT * from "+this.warehouse.getName() +"_categories;"   ;
+        String sql;
+        try {
+            sql="SELECT * from "+warehouseName +"_categories;"   ;
+        }catch (Exception e){
+            System.out.println("NOOOOOOOO");
+            sql="SELECT * from "+"Marine" +"_categories;"   ;
+        }
         System.out.println(sql);
         try {
             Statement statement=connection.createStatement();
             ResultSet resultSet=statement.executeQuery(sql);
             while (resultSet.next()){
-                data.add(new Category(resultSet.getInt("id"),resultSet.getString("name") ));
+                data.add(new Category(resultSet.getInt("category_id"),resultSet.getString("category_name") ));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -86,11 +98,30 @@ public class WarehouseMainController implements Initializable {
     public void setWarehouse(Warehouse x){
         //this.warehouse=w;
         //check with database and get warehouse id
-        int id=0;
-        this.warehouse=x;
+//        int id=0;
+//        this.warehouse=x;
     }
 
     public void searchButtonClicked(ActionEvent actionEvent) {
+        category_table_w.getItems().clear();
+        name.setCellValueFactory(new PropertyValueFactory<Category, String>("name"));
+        id.setCellValueFactory(new PropertyValueFactory<Category, Integer>("id"));
+
+        ConnectionU connectionClass = new ConnectionU();
+        Connection connection=connectionClass.getConnection();
+        try {
+            String sql= "SELECT category_name,category_id from "+WAREHOUSE_NAME+"_categories WHERE category_name like '%"+searchbar.getText().trim()+"%';";
+
+            Statement statement=connection.createStatement();
+            ResultSet resultSet=statement.executeQuery(sql);
+
+            while (resultSet.next()){
+                data.add(new Category( resultSet.getInt("category_id"),resultSet.getString("category_name") ));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        category_table_w.setItems(data);
     }
 
     /**
@@ -105,7 +136,7 @@ public class WarehouseMainController implements Initializable {
         Parent wmain_page = loader.load();
         Scene wmain_scene = new Scene(wmain_page);
         OrderAlertController w=loader.getController();
-        w.setWarehouse(this.warehouse);
+//        w.setWarehouse(this.warehouse);
         Stage manage=new Stage();
         manage.initModality(Modality.APPLICATION_MODAL);
         manage.setScene(wmain_scene);
@@ -125,7 +156,7 @@ public class WarehouseMainController implements Initializable {
         Scene wmain_scene = new Scene(wmain_page);
 
         UpdateDController w=loader.getController();
-        w.setPlace(this.warehouse);
+//        w.setPlace(this.warehouse);
 
 //        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
 //        window.setScene(wmain_scene);
@@ -149,7 +180,7 @@ public class WarehouseMainController implements Initializable {
         Scene wmain_scene = new Scene(wmain_page);
 
         AddCategoryController w=loader.getController();
-        w.setPlace(this.warehouse);
+//        w.setPlace(this.warehouse);
 
 //        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
 //        window.setScene(wmain_scene);
@@ -159,7 +190,9 @@ public class WarehouseMainController implements Initializable {
         manage.setScene(wmain_scene);
         manage.show();
     }
+    public void addrow(){
 
+    }
     /**
      * switch to subcategory view of the selected category
      * @param actionEvent
@@ -167,27 +200,26 @@ public class WarehouseMainController implements Initializable {
      */
 
     public void viewButtonClicked(ActionEvent actionEvent) throws IOException{
+
         FXMLLoader loader=new FXMLLoader();
-        loader.setLocation(getClass().getResource("/inventory_subcategory/storesub.fxml"));
-        Parent wmain_page = loader.load();
-        Scene wmain_scene = new Scene(wmain_page);
+        loader.setLocation(getClass().getResource("/inventory_subcategory/StoreSub.fxml"));
+        try {
+            loader.load();
+        }catch (IOException e){
+            System.out.println("o no");
+        }
+        StoreSubController ok =loader.getController();
+        ok.setTableText(WAREHOUSE_NAME);
+        Parent p =loader.getRoot();
+        Stage stage=new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
 
-        StoreSubController w=loader.getController();
-        w.setPlace(this.warehouse);
-        w.setCategory(category_table_w.getSelectionModel().getSelectedItem());
-
-
-//        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-//        window.setScene(wmain_scene);
-//        window.show();
-        Stage manage=new Stage();
-        manage.initModality(Modality.APPLICATION_MODAL);
-        manage.setScene(wmain_scene);
-        manage.show();
+        stage.setScene(new Scene(p));
+        stage.show();
     }
 
     /**
-     * switch to updateCAtegory screen
+     * switch to update Category screen
      * @param actionEvent
      * @throws IOException
      */
@@ -199,7 +231,7 @@ public class WarehouseMainController implements Initializable {
         Scene wmain_scene = new Scene(wmain_page);
 
         UpdateCategoryController w=loader.getController();
-        w.setPlace(this.warehouse);
+//        w.setPlace(this.warehouse);
         w.setCategory(category_table_w.getSelectionModel().getSelectedItem());
 
         Stage manage=new Stage();
@@ -215,7 +247,6 @@ public class WarehouseMainController implements Initializable {
      */
 
     public void deleteButtonClicked(ActionEvent actionEvent) throws IOException{
-
         //code to delete category
         Category c=(Category) category_table_w.getSelectionModel().getSelectedItem();
         String c_name=c.getName();
@@ -224,14 +255,16 @@ public class WarehouseMainController implements Initializable {
         Connection connection=connectionClass.getConnection();
         try {
             Statement statement=connection.createStatement();
-            String tableName=this.warehouse.getName();
+            String tableName=WAREHOUSE_NAME;
             System.out.println(tableName+" "+c_name);
-            String sql = "DELETE FROM "+tableName+"_categories WHERE "+tableName+"_categories.category_name = '"+c_name+"';";
+            String sql = "DELETE FROM "+tableName+"_categories WHERE category_name = '"+c_name+"';";
             statement.executeUpdate(sql);
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        category_table_w.refresh();
+//        this.setTableText();
 
     }
 

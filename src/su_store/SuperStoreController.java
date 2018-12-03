@@ -2,6 +2,7 @@ package su_store;
 
 import ConnectionUtil.ConnectionU;
 import MainClasses.Store;
+import MainClasses.Warehouse;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -17,6 +18,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import link_warehouse.LinkWarehouseController;
+import store_main.StoreMainController;
+import w_main.WarehouseMainController;
 import w_manageorder.Order;
 
 import javax.swing.*;
@@ -97,5 +101,44 @@ public class SuperStoreController implements Initializable {
             e.printStackTrace();
         }
         store_table.setItems(data);
+    }
+
+    public void deleteButtonClicked(ActionEvent actionEvent) {
+    }
+
+    public void linkButtonClicked(ActionEvent actionEvent) {
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getResource("/link_warehouse/link_ware.fxml"));
+        try {
+            Parent root = (Parent)loader.load();
+        }catch (IOException e){
+            System.out.println("OOPS");
+        }
+
+        Store w2=(MainClasses.Store) store_table.getSelectionModel().getSelectedItem();
+        LinkWarehouseController ok = loader.getController();
+        ok.setStore(w2);
+        Parent p = loader.getRoot();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(p));
+        stage.show(); //AndWait();
+    }
+
+    public void viewButtonClicked(ActionEvent actionEvent) {
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getResource("/store_main/storemain.fxml"));
+        try {
+            Parent root = (Parent)loader.load();
+        }catch (IOException e){
+            System.out.println("OOPS");
+        }
+
+        Store w2=(MainClasses.Store) store_table.getSelectionModel().getSelectedItem();
+        StoreMainController ok = loader.getController();
+        ok.setStore(w2);
+        Parent p = loader.getRoot();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(p));
+        stage.show(); //AndWait();
     }
 }

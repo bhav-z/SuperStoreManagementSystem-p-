@@ -38,17 +38,6 @@ public class SuperWarehouseController implements Initializable {
     @FXML private TableView ware_table;
     @FXML private TableColumn name;
     @FXML private TableColumn id;
-    //@FXML private TableColumn quantity;
-    //@FXML private TableColumn date;
-    //@FXML private TableColumn feasible;
-    //@FXML private TableColumn itemname;
-    //@FXML private TableColumn itemid;
-    //@FXML private TableColumn fulfill;
-    //@FXML private TableColumn forward;
-    //@FXML private  TableColumn order;
-//    @FXML private  TableColumn vieww;
-//    @FXML private  TableColumn linkk;
-//    @FXML private TableColumn deletee;
 
     private ObservableList<Warehouse> data = FXCollections.observableArrayList();
 
@@ -103,12 +92,6 @@ public class SuperWarehouseController implements Initializable {
     public void viewButtonClicked(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("/w_main/warehouse_main.fxml"));
-//        Parent wmain_page = loader.load();
-//        Scene wmain_scene = new Scene(wmain_page);
-//        Stage manage=new Stage();
-//        manage.initModality(Modality.APPLICATION_MODAL);
-//        manage.setScene(wmain_scene);
-//        manage.show();
         try {
             Parent root = (Parent)loader.load();
         }catch (IOException e){

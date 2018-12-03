@@ -43,6 +43,7 @@ public class StoreItemController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb){
+        System.out.println(this.getClass());
         name.setCellValueFactory(new PropertyValueFactory<Store, String>("category_name"));
 
         item_table.setItems(data);

@@ -11,8 +11,6 @@ import javafx.stage.Stage;
  */
 public class WareMain1 extends Application {
 
-
-
     public static void main(String[] args) {
         launch(args);
     }

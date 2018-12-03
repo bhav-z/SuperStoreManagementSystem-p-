@@ -1,5 +1,6 @@
 package inventory_subcategory;
 
+import ConnectionUtil.ConnectionU;
 import MainClasses.Category;
 import MainClasses.Place;
 import MainClasses.Subcategory;
@@ -25,6 +26,10 @@ import update_subcategory.UpdateSubcategoryController;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 
 /**
@@ -36,18 +41,44 @@ public class StoreSubController implements Initializable {
     private TableView category_table_s;
     @FXML private TableColumn name;
     @FXML private TableColumn id;
-    private ObservableList<Store> data= FXCollections.observableArrayList(new Store("Smart Phone"));
+    private ObservableList<Store> dataS= FXCollections.observableArrayList(new Store("Smart Phone"));
+    private ObservableList<Store> dataW= FXCollections.observableArrayList(new Store("Smart Phone"));
 
     private Place place;
+    private String categoryNAME;
     private Category category;
+    private String WAREHOUSE_NAME;
 
-
+    public void setTableText(String name){
+        /*this.WAREHOUSE_NAME=name;
+        //System.out.println(this.warehouse.getName());
+        name.setCellValueFactory(new PropertyValueFactory<St, String>("name"));
+        id.setCellValueFactory(new PropertyValueFactory<Category, Integer>("id"));
+        String sql;
+        try {
+            sql="SELECT * from "+warehouseName +"_categories;"   ;
+        }catch (Exception e){
+            System.out.println("NOOOOOOOO");
+            sql="SELECT * from "+"Marine" +"_categories;"   ;
+        }
+        System.out.println(sql);
+        try {
+            Statement statement=connection.createStatement();
+            ResultSet resultSet=statement.executeQuery(sql);
+            while (resultSet.next()){
+                data.add(new Category(resultSet.getInt("category_id"),resultSet.getString("category_name") ));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        category_table_w.setItems(data);*/
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb){
+        System.out.println(this.getClass());
         name.setCellValueFactory(new PropertyValueFactory<Store, String>("category_name"));
 
-
-        category_table_s.setItems(data);
+        category_table_s.setItems(dataW);
     }
 
     public void setPlace(Place warehouse) {
@@ -66,7 +97,8 @@ public class StoreSubController implements Initializable {
      * @param actionEvent argument for detecting button click
      * @throws IOException known thrown exception by the program
      */
-    public void addSubcategoryButtonClicked(ActionEvent actionEvent) throws IOException{
+    public void addSubcategoryButtonClicked(ActionEvent actionEvent,String NAME) throws IOException{
+
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("/add_subcategory/addsub.fxml"));
         Parent wmain_page = loader.load();
@@ -74,7 +106,7 @@ public class StoreSubController implements Initializable {
 
         AddSubController w=loader.getController();
         w.setPlace(this.place);
-        w.setCategory(this.category);
+//        w.setCategory(this.category);
 
         Stage manage=new Stage();
         manage.initModality(Modality.APPLICATION_MODAL);
@@ -96,7 +128,7 @@ public class StoreSubController implements Initializable {
         StoreItemController w=loader.getController();
         w.setPlace(this.place);
         w.setSubcategory(category_table_s.getSelectionModel().getSelectedItem());
-        w.setCategory(this.category);
+//        w.setCategory(this.category);
 
         Stage manage=new Stage();
         manage.initModality(Modality.APPLICATION_MODAL);

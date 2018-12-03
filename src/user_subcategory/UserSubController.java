@@ -24,6 +24,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class UserSubController implements Initializable {
+
     @FXML
     private ComboBox<String> sortCombo;
     ObservableList<String> list= FXCollections.observableArrayList("Name");
@@ -61,6 +62,7 @@ public class UserSubController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb){
+        System.out.println(this.getClass());
         sortCombo.setItems(list);
 
         name.setCellValueFactory(new PropertyValueFactory<Store, String>("category_name"));

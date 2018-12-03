@@ -22,11 +22,10 @@
                 <Menu mnemonicParsing="false" text="Logout" />
             </menus>
         </MenuBar>
-        <Button fx:id="searchBtn" onAction="#searchFnc" layoutX="574.0" layoutY="52.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="96.0" text="Search" />
-        <Button fx:id="add_warehouse" onAction="#addButtonClicked" layoutX="495.0" layoutY="326.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="175.0" text="Add New Warehouse" />
+        <Button fx:id="searchBtn" layoutX="574.0" layoutY="52.0" mnemonicParsing="false" onAction="#searchFnc" prefHeight="27.0" prefWidth="96.0" text="Search" />
+        <Button fx:id="add_warehouse" layoutX="495.0" layoutY="326.0" mnemonicParsing="false" onAction="#addButtonClicked" prefHeight="27.0" prefWidth="175.0" text="Add New Warehouse" />
         <Button layoutX="69.0" layoutY="326.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="27.0" prefWidth="116.0" text="Back" />
       <Button fx:id="view" layoutX="538.0" layoutY="152.0" mnemonicParsing="false" onAction="#viewButtonClicked" prefHeight="27.0" prefWidth="116.0" text="View" />
       <Button fx:id="delete" layoutX="538.0" layoutY="193.0" mnemonicParsing="false" onAction="#deleteButtonClicked" prefHeight="27.0" prefWidth="116.0" text="Delete" />
-      <Button fx:id="link" layoutX="538.0" layoutY="235.0" mnemonicParsing="false" onAction="#linkButtonClicked" prefHeight="27.0" prefWidth="116.0" text="Link" />
     </children>
 </AnchorPane>

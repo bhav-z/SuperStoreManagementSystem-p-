@@ -47,13 +47,13 @@ public class StoreMainController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb){
+        System.out.println(this.getClass());
+
         ConnectionU connectionClass = new ConnectionU();
         Connection connection=connectionClass.getConnection();
 
         name.setCellValueFactory(new PropertyValueFactory<Category, String>("name"));
         id.setCellValueFactory(new PropertyValueFactory<Category, Integer>("id"));
-
-
         category_table_s.setItems(data);
         String sql="SELECT * from store_categories1;"   ;
         try {
@@ -179,5 +179,9 @@ public class StoreMainController implements Initializable {
     public void setStoreName(String s) {
         this.storename=s;
         this.store= new MainClasses.Store(s,1) ;
+    }
+
+    public  void setStore(MainClasses.Store store){
+        this.store=store;
     }
 }
