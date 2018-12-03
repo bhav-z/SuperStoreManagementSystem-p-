@@ -24,7 +24,7 @@
         </MenuBar>
         <Button layoutX="574.0" layoutY="52.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="96.0" text="Search" />
         <Button fx:id="add_warehouse" onAction="#addButtonClicked" layoutX="495.0" layoutY="326.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="175.0" text="Add New Warehouse" />
-        <Button layoutX="69.0" layoutY="326.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="116.0" text="Back" />
+        <Button onAction="#backButtonClicked" layoutX="69.0" layoutY="326.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="116.0" text="Back" />
       <Button fx:id="view" onAction="#viewButtonClicked" layoutX="538.0" layoutY="152.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="116.0" text="View" />
       <Button fx:id="delete" onAction="#deleteButtonClicked" layoutX="538.0" layoutY="193.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="116.0" text="Delete" />
       <Button fx:id="link" onAction="#linkButtonClicked" layoutX="538.0" layoutY="235.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="116.0" text="Link" />
