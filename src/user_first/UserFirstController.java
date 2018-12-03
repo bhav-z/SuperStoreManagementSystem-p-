@@ -64,7 +64,7 @@ public class UserFirstController implements Initializable {
         loader.setLocation(getClass().getResource("/w_main/warehouse_main.fxml"));
 
         UserMainController a=loader.getController();
-        MainClasses.Store w2=new MainClasses.Store();
+        MainClasses.Store w2=new MainClasses.Store("ok",1);
         w2.setName(comboString.getValue().toString());
         a.setStore(w2);
 

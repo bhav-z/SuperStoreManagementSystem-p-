@@ -178,6 +178,6 @@ public class StoreMainController implements Initializable {
 
     public void setStoreName(String s) {
         this.storename=s;
-        this.store= new MainClasses.Store() ;
+        this.store= new MainClasses.Store(s,1) ;
     }
 }

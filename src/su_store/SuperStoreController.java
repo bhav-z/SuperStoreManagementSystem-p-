@@ -1,5 +1,7 @@
 package su_store;
 
+import ConnectionUtil.ConnectionU;
+import MainClasses.Store;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -9,14 +11,21 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import w_manageorder.Order;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 
 public class SuperStoreController implements Initializable {
@@ -33,27 +42,26 @@ public class SuperStoreController implements Initializable {
     //@FXML private TableColumn fulfill;
     //@FXML private TableColumn forward;
     //@FXML private  TableColumn order;
-    @FXML private  TableColumn view;
-    @FXML private  TableColumn link;
-    @FXML private  TableColumn delete;
+//    @FXML private  TableColumn view;
+//    @FXML private  TableColumn link;
+//    @FXML private  TableColumn delete;
 
 
-    private ObservableList<Order> data= FXCollections.observableArrayList(new Order("Bandra", "123", "iPhone X", "10",
-            "45", "7/12/18", "yes"));
+    private ObservableList<Store> data= FXCollections.observableArrayList(new Store("Sunrise", 123),
+            new Store("Sudo Foods",3));
+    @FXML
+    private TextField searchBar;
 
 
     @Override
     public void initialize(URL url, ResourceBundle rb){
-        storename.setCellValueFactory(new PropertyValueFactory<Order, String>("sname"));
-        storeid.setCellValueFactory(new PropertyValueFactory<Order, String>("sid"));
+        storename.setCellValueFactory(new PropertyValueFactory<Order, String>("name"));
+        storeid.setCellValueFactory(new PropertyValueFactory<Order, String>("ID"));
         //quantity.setCellValueFactory(new PropertyValueFactory<Order, String>("quantity"));
         //date.setCellValueFactory(new PropertyValueFactory<Order, String>("date"));
         //itemid.setCellValueFactory(new PropertyValueFactory<Order, String>("iid"));
         //itemname.setCellValueFactory(new PropertyValueFactory<Order, String>("iname"));
         //feasible.setCellValueFactory(new PropertyValueFactory<Order, String>("feasible"));
-        delete.setCellValueFactory(new PropertyValueFactory<Order, String>("delete"));
-        link.setCellValueFactory(new PropertyValueFactory<Order, String>("link"));
-        view.setCellValueFactory(new PropertyValueFactory<Order, String>("view"));
 
 
         store_table.setItems(data);
@@ -67,5 +75,27 @@ public class SuperStoreController implements Initializable {
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         window.setScene(wmain_scene);
         window.show();
+    }
+
+    public void searchFnc(ActionEvent actionEvent) {
+        store_table.getItems().clear();
+        storename.setCellValueFactory(new PropertyValueFactory<Store, String>("name"));
+        storeid.setCellValueFactory(new PropertyValueFactory<Store, Integer>("ID"));
+
+        ConnectionU connectionClass = new ConnectionU();
+        Connection connection=connectionClass.getConnection();
+        try {
+            String sql= "SELECT name,id from store_list WHERE name like '%"+searchBar.getText().trim()+"%';";
+
+            Statement statement=connection.createStatement();
+            ResultSet resultSet=statement.executeQuery(sql);
+
+            while (resultSet.next()){
+                data.add(new Store(resultSet.getString("name") , resultSet.getInt("id")));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        store_table.setItems(data);
     }
 }

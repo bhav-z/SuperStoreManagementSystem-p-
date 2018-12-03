@@ -9,7 +9,7 @@
     <children>
         <Label layoutX="133.0" layoutY="24.0" text="Bhav's Superstore" textAlignment="CENTER">
          <font>
-            <Font size="23.0" />
+            <Font name="Wingdings 2" size="23.0" />
          </font></Label>
         <Label layoutX="199.0" layoutY="73.0" text="Login As" />
         <Button fx:id="SuperUser" layoutX="63.0" layoutY="113.0" mnemonicParsing="false" onAction="#buttonClickedForLogin" prefHeight="37.0" prefWidth="147.0" text="Super User" />

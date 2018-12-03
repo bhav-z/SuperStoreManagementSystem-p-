@@ -19,6 +19,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import w_main.WarehouseMainController;
 import w_manageorder.Order;
 import w_manageorder.OrderAlertController;
 
@@ -102,12 +103,25 @@ public class SuperWarehouseController implements Initializable {
     public void viewButtonClicked(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("/w_main/warehouse_main.fxml"));
-        Parent wmain_page = loader.load();
-        Scene wmain_scene = new Scene(wmain_page);
-        Stage manage=new Stage();
-        manage.initModality(Modality.APPLICATION_MODAL);
-        manage.setScene(wmain_scene);
-        manage.show();
+//        Parent wmain_page = loader.load();
+//        Scene wmain_scene = new Scene(wmain_page);
+//        Stage manage=new Stage();
+//        manage.initModality(Modality.APPLICATION_MODAL);
+//        manage.setScene(wmain_scene);
+//        manage.show();
+        try {
+            Parent root = (Parent)loader.load();
+        }catch (IOException e){
+            System.out.println("OOPS");
+        }
+
+        Warehouse w2=(Warehouse) ware_table.getSelectionModel().getSelectedItem();
+        WarehouseMainController ok = loader.getController();
+        ok.setWarehouse(w2);
+        Parent p = loader.getRoot();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(p));
+        stage.show(); //AndWait();
     }
 
     public void deleteButtonClicked(ActionEvent actionEvent) {

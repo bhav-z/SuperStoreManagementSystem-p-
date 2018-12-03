@@ -12,7 +12,9 @@ public class Store extends Place{
     public void changeWarehouse(Warehouse neeu){
         linked_warehouse=neeu;
     }
-    public Store() {
+    public Store(String n,int i) {
+        name=n;
+        ID=i;
     }
 
     @Override
