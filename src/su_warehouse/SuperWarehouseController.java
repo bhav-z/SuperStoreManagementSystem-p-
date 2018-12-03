@@ -1,6 +1,8 @@
 package su_warehouse;
 
 
+import ConnectionUtil.ConnectionU;
+import MainClasses.Warehouse;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -20,12 +22,15 @@ import w_manageorder.OrderAlertController;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 
 public class SuperWarehouseController implements Initializable {
 
-    @FXML
-    private TableView ware_table;
+    @FXML private TableView ware_table;
     @FXML private TableColumn ware_name;
     @FXML private TableColumn ware_id;
     //@FXML private TableColumn quantity;
@@ -40,9 +45,7 @@ public class SuperWarehouseController implements Initializable {
 //    @FXML private  TableColumn linkk;
 //    @FXML private TableColumn deletee;
 
-    private ObservableList<Order> data= FXCollections.observableArrayList(new Order("Worli", "13", "iPhone X", "10",
-            "45", "7/12/18", "yes"));
-
+    private ObservableList<Warehouse> data = FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL url, ResourceBundle rb){
@@ -59,6 +62,27 @@ public class SuperWarehouseController implements Initializable {
 //
 //
 //        ware_table.setItems(data);
+
+        ware_name.setCellValueFactory(new PropertyValueFactory<Warehouse, String>("name"));
+        ware_id.setCellValueFactory(new PropertyValueFactory<Warehouse, Integer>("id"));
+
+        ConnectionU connectionClass = new ConnectionU();
+        Connection connection=connectionClass.getConnection();
+        try {
+            String sql= "SELECT name,id from warehouse_list;";
+
+            Statement statement=connection.createStatement();
+            ResultSet resultSet=statement.executeQuery(sql);
+
+            while (resultSet.next()){
+                data.add(new Warehouse(resultSet.getString("name") , resultSet.getInt("id")));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        ware_table.setItems(data);
+
+
     }
 
     public void addButtonClicked(ActionEvent actionEvent) throws IOException {
@@ -74,7 +98,7 @@ public class SuperWarehouseController implements Initializable {
 
     public void viewButtonClicked(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader=new FXMLLoader();
-        loader.setLocation(getClass().getResource("/w_main/.fxml"));
+        loader.setLocation(getClass().getResource("/w_main/warehouse_main.fxml"));
         Parent wmain_page = loader.load();
         Scene wmain_scene = new Scene(wmain_page);
         Stage manage=new Stage();
@@ -89,6 +113,16 @@ public class SuperWarehouseController implements Initializable {
 
     public void linkButtonClicked(ActionEvent actionEvent) {
         //code for changing store link
+    }
+
+    public void backButtonClicked(ActionEvent actionEvent) throws IOException{
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getResource("/su_main/su_main.fxml"));
+        Parent wmain_page = loader.load();
+        Scene wmain_scene = new Scene(wmain_page);
+        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        window.setScene(wmain_scene);
+        window.show();
     }
 }
 

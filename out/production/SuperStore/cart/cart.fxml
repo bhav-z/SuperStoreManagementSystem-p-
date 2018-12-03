@@ -18,10 +18,10 @@
                 <TableColumn fx:id="delete" prefWidth="110.0" />
             </columns>
         </TableView>
-        <Button layoutX="32.0" layoutY="286.0" mnemonicParsing="false" text="Back" />
+        <Button fx:id="back" onAction="#backButtonClicked" layoutX="32.0" layoutY="286.0" mnemonicParsing="false" text="Back" />
         <Button layoutX="491.0" layoutY="286.0" mnemonicParsing="false" text="Checkout" />
         <Label layoutX="414.0" layoutY="247.0" prefHeight="17.0" prefWidth="49.0" text="Total" />
-        <TextField text="40,000" layoutX="476.0" layoutY="242.0" prefHeight="27.0" prefWidth="77.0" />
+        <TextField fx:id="total" text="40,000" layoutX="476.0" layoutY="242.0" prefHeight="27.0" prefWidth="77.0" />
     </children>
 </AnchorPane>
 

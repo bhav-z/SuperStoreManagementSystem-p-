@@ -40,9 +40,9 @@ public class Cart {
         this.name=n;
         this.quantity=q;
         this.cost= c;
-        this.del=new Button("Remove");
-        this.date=new SimpleStringProperty("7/12/18");
-        this.ID=new SimpleStringProperty("10");
+//        this.del=new Button("Remove");
+//        this.date=new SimpleStringProperty("7/12/18");
+//        this.ID=new SimpleStringProperty("10");
     }
 
     public String getName() {
